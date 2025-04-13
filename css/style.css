@@ -1,0 +1,313 @@
+/* css/style.css - Completo: Inclui Layout Horizontal para Projetos */
+
+/* Definição das Variáveis Globais */
+:root {
+    --color-bg-dark: #0f0f1a;
+    --color-bg-medium: #1a1a2e;
+    --color-card-bg: rgba(20, 20, 35, 0.85);
+    --color-primary-accent: #9a4efc; /* Roxo Neon */
+    --color-text-light: #e0e0e0;
+    --color-text-medium: #c0c0e0;
+    --color-text-dark: #a0a0c0; /* Para handle e subtítulo */
+    --color-text-headings: #ffffff;
+    --color-border-light: rgba(255, 255, 255, 0.1);
+    --color-border-medium: rgba(255, 255, 255, 0.2);
+    --color-shadow-glow: rgba(91, 4, 158, 0.37); /* Sombra Roxo Neon */
+    --color-shadow-glow-hover: rgba(154, 78, 252, 0.6); /* Brilho Roxo Hover */
+    --color-shadow-glow-active: rgba(154, 78, 252, 0.5); /* Brilho Roxo Active */
+    --color-shadow-dark: rgba(0, 0, 0, 0.2);
+
+    --font-main: sans-serif;
+    --font-size-h1: 1.8em;
+    --font-size-h1-mobile: 1.5em;
+    --font-size-handle: 1.2em;
+    --font-size-handle-mobile: 1.0em;
+    --font-size-subtitle: 0.9em;
+    --font-size-subtitle-mobile: 0.8em;
+    --font-size-tab-icon: 1.5em;
+    --font-size-tab-icon-mobile: 1.4em;
+    --font-size-tab-title: 1.3em;
+    --font-size-tab-title-mobile: 1.1em;
+    --font-size-body: 0.95em;
+    --font-size-body-mobile: 0.9em;
+    --font-size-button: 1em;
+    --font-size-button-mobile: 0.95em;
+    --font-size-project-title: 1.1em; /* Tamanho base Título Projeto */
+    --font-size-project-title-mobile: 1.0em; /* Tamanho base Título Projeto Mobile */
+    /* --font-size-project-link não é mais necessário diretamente se o link está no título */
+
+    /* Cores dos Botões Sociais */
+    --color-btn-linkedin: #0e76a8;
+    --color-btn-github: #333;
+    --color-btn-medium: #000000;
+    --color-btn-email: #8B56FF;
+}
+
+/* --- Estilos Gerais --- */
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: var(--color-bg-medium);
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--color-bg-medium), var(--color-bg-dark));
+    z-index: -1;
+}
+
+.profile-card {
+    background-color: var(--color-card-bg);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 32px var(--color-shadow-glow);
+    border: 1px solid var(--color-border-light);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary-accent);
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* --- Textos no Card --- */
+h1 {
+    margin: 10px 0 8px;
+    color: var(--color-text-headings);
+    font-size: var(--font-size-h1);
+}
+
+.handle {
+    font-size: var(--font-size-handle);
+    color: var(--color-text-dark);
+    margin-top: -8px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: var(--font-size-subtitle);
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+/* --- Abas (Tabs) --- */
+.tabs {
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tab-icon {
+    font-size: var(--font-size-tab-icon);
+    color: var(--color-text-dark);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tab-icon:hover {
+    color: var(--color-text-headings);
+    transform: scale(1.1);
+}
+
+.tab-icon.active-tab {
+    color: var(--color-primary-accent);
+}
+
+/* --- Conteúdo das Abas (Tab Content) --- */
+.tab-content-area {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateX(25px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.tab-content.active-content {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Títulos das Abas */
+#about-content h2,
+#social-content h2,
+#projects-content h2 {
+    color: var(--color-text-headings);
+    margin-bottom: 15px; /* Reduzido para Projects */
+    text-align: center;
+    font-size: var(--font-size-tab-title);
+}
+
+/* Conteúdo "About Me" */
+#about-content p {
+    color: var(--color-text-medium);
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: var(--font-size-body);
+}
+
+/* Conteúdo "Social Media" */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-button {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-text-headings);
+    font-weight: bold;
+    font-size: var(--font-size-button);
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border-medium);
+}
+.social-button i { margin-right: 10px; }
+.social-button:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.15); box-shadow: 0 4px 15px var(--color-shadow-dark); }
+.social-button.linkedin { background-color: var(--color-btn-linkedin); }
+.social-button.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-button.github { background-color: var(--color-btn-github); }
+.social-button.medium { background-color: var(--color-btn-medium); }
+.social-button.email { background-color: var(--color-btn-email); }
+
+
+/* --- Conteúdo "Projects" (Layout Horizontal com Flexbox) --- */
+.project-list {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 15px; /* Espaço para scrollbar */
+    margin-left: -15px; /* Compensa padding */
+    padding-left: 15px;
+    margin-right: -15px; /* Compensa padding */
+    padding-right: 15px;
+    /* Estilo da scrollbar (opcional) */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(154, 78, 252, 0.3) transparent;
+}
+.project-list::-webkit-scrollbar { height: 8px; }
+.project-list::-webkit-scrollbar-track { background: transparent; }
+.project-list::-webkit-scrollbar-thumb { background-color: rgba(154, 78, 252, 0.3); border-radius: 10px; border: 2px solid transparent; background-clip: content-box; }
+.project-list::-webkit-scrollbar-thumb:hover { background-color: rgba(154, 78, 252, 0.5); }
+
+.project-item {
+    flex: 0 0 260px; /* Largura base dos cards de projeto */
+    margin-left: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-light);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+/* Título do Projeto (Link) */
+.project-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: var(--font-size-project-title);
+    font-weight: bold;
+    text-align: left;
+}
+.project-title-link {
+    color: #c792ea; /* Cor Lilás Claro (ou a que você preferir) */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.project-title-link:hover {
+    color: var(--color-text-light);
+    text-decoration: underline;
+}
+.project-title-link i {
+    margin-right: 8px;
+    font-size: 0.9em;
+}
+
+/* Descrição do Projeto */
+.project-description {
+    color: var(--color-text-medium);
+    font-size: var(--font-size-body);
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
+    flex-grow: 1; /* Ocupa espaço vertical */
+}
+
+/* --- Botão da Página 404 --- */
+.error-container a { color: var(--color-primary-accent); text-decoration: none; font-weight: bold; border: 1px solid var(--color-primary-accent); padding: 10px 20px; border-radius: 5px; display: inline-block; background-color: transparent; box-shadow: none; transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; }
+.error-container a:hover { background-color: var(--color-primary-accent); color: var(--color-text-headings); transform: translateY(-3px) scale(1.05); box-shadow: 0 0 12px 3px var(--color-shadow-glow-hover); }
+.error-container a:active { transform: translateY(-1px) scale(1.02); box-shadow: 0 0 8px 2px var(--color-shadow-glow-active); }
+
+/* --- Estilos de Foco para Acessibilidade --- */
+.tab-icon:focus,
+.social-button:focus,
+.error-container a:focus,
+.project-title-link:focus { /* Adicionado foco ao título do projeto */
+    outline: 2px solid var(--color-primary-accent);
+    outline-offset: 3px;
+}
+
+/* --- Ajustes Responsivos --- */
+@media (max-width: 600px) {
+    .profile-card { padding: 20px 25px; max-width: 90%; }
+    h1 { font-size: var(--font-size-h1-mobile); }
+    .handle { font-size: var(--font-size-handle-mobile); margin-top: -6px; margin-bottom: 12px; }
+    .subtitle { font-size: var(--font-size-subtitle-mobile); margin-bottom: 15px; }
+    .profile-picture { width: 100px; height: 100px; }
+    .tab-icon { font-size: var(--font-size-tab-icon-mobile); }
+    .tabs { gap: 25px; margin-bottom: 20px; padding-bottom: 10px; }
+    .social-button { padding: 10px 15px; font-size: var(--font-size-button-mobile); }
+    #about-content h2, #social-content h2, #projects-content h2 { font-size: var(--font-size-tab-title-mobile); margin-bottom: 15px; }
+    #about-content p { font-size: var(--font-size-body-mobile); }
+    .social-buttons { gap: 12px; }
+    .error-container a { padding: 8px 16px; font-size: var(--font-size-button-mobile); }
+
+    /* Ajustes responsivos para Projetos Horizontais */
+    .project-list { margin-left: -10px; padding-left: 10px; margin-right: -10px; padding-right: 10px; padding-bottom: 10px; }
+    .project-list::-webkit-scrollbar { height: 6px; }
+    .project-item { flex-basis: 220px; margin-left: 10px; padding: 12px; }
+    .project-title { font-size: var(--font-size-project-title-mobile); margin-bottom: 5px; }
+    .project-description { font-size: var(--font-size-body-mobile); }
+}
