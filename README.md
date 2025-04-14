@@ -64,8 +64,7 @@ L0g0rhythm.github.io/
     js/
         script.js                   # Tab logic and project loading
     images/
-        profile.jpg                 # Profile picture
-        screenshot/                 # Folder for screenshots                        
+        profile.jpg                 # Profile picture                      
 ```
 
 
