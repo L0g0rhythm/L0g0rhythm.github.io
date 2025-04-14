@@ -1,0 +1,112 @@
+/* css/404.css - 404 Page Specific Styles */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 20px;
+    color: var(--color-text-light);
+    position: relative;
+    z-index: 1;
+}
+
+.ascii-art {
+    font-family: var(--font-main);
+    color: var(--color-primary-accent);
+    font-size: 1em;
+    line-height: 1.4;
+    text-shadow: 0 0 5px var(--color-primary-accent);
+    margin-bottom: 20px;
+    white-space: pre;
+}
+
+.error-container h1 {
+    font-size: 2em;
+    color: #ff6b6b; /* Error color */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: var(--font-headings);
+    font-weight: 400;
+}
+
+.error-container p {
+    font-size: 1.2em;
+    color: var(--color-text-medium);
+    margin-bottom: 35px;
+    font-family: var(--font-main);
+    font-weight: 300; /* Light weight */
+    max-width: 450px;
+    line-height: 1.5;
+}
+
+.error-navigation {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.error-button {
+    color: var(--color-primary-accent);
+    text-decoration: none;
+    font-weight: 700; /* Bold */
+    border: 1px solid var(--color-primary-accent);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-family: var(--font-main);
+    font-size: var(--font-size-button);
+}
+
+.error-button:hover {
+    background-color: var(--color-primary-accent);
+    color: var(--color-text-headings);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 12px 3px var(--color-shadow-glow-hover);
+}
+
+.error-button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 0 8px 2px var(--color-shadow-glow-active);
+}
+
+.error-button.github {
+    color: var(--color-text-dark);
+    border-color: var(--color-text-dark);
+}
+
+.error-button.github:hover {
+    background-color: var(--color-text-dark);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 10px 2px rgba(160, 160, 192, 0.5);
+}
+
+/* Responsive adjustments specifically for 404 elements */
+@media (max-width: 600px) {
+    .error-container {
+        min-height: 70vh;
+    }
+    .error-container h1 {
+        font-size: 1.8em;
+    }
+    .error-container p {
+        font-size: 1.0em;
+        margin-bottom: 25px;
+    }
+    .ascii-art {
+        font-size: 0.9em;
+    }
+    .error-button {
+        padding: 8px 16px;
+        font-size: var(--font-size-button-mobile);
+    }
+    .error-navigation {
+        gap: 10px;
+    }
+}

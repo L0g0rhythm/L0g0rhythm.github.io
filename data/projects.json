@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Cryptoolsec",
+      "repoUrl": "https://github.com/L0g0rhythm/Cryptoolsec",
+      "description": "Secure Python CLI & GUI tool for efficient file/stream encryption & decryption (AES-256-GCM, streaming I/O). Supports passwords (Argon2id+Salt) or key files. Built for security and automation.",
+      "demoUrl": null,
+      "articleUrl": null
+    },
+    {
+      "title": "EITIN",
+      "repoUrl": "https://github.com/L0g0rhythm/EITIN",
+      "description": "PowerShell script for automated IT inventory. Collects detailed system hardware, software, network, and security information, running with elevated privileges to ensure data completeness.",
+      "demoUrl": null,
+      "articleUrl": null
+    }
+  ]
