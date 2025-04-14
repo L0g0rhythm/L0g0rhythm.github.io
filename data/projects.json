@@ -12,5 +12,19 @@
       "description": "PowerShell script for automated IT inventory. Collects detailed system hardware, software, network, and security information, running with elevated privileges to ensure data completeness.",
       "demoUrl": null,
       "articleUrl": null
+    },
+    {
+      "title": "MDex",
+      "repoUrl": "https://github.com/L0g0rhythm/MDex",
+      "description": "Python script to download manga chapters from MangaDex API and automatically create PDFs. Supports multiple languages, interactive/CLI modes, and flexible selection.",
+      "demoUrl": null,
+      "articleUrl": null
+    },
+    {
+      "title": "Control-Aegis",
+      "repoUrl": "https://github.com/L0g0rhythm/Control-Aegis",
+      "description": "PowerShell module for managing port blocks/exceptions (Firewall) and domains (Hosts file) on Windows using a config.json file, with logging and rollback.",
+      "demoUrl": null,
+      "articleUrl": null
     }
-  ]
+]
