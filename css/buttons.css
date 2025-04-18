@@ -1,0 +1,55 @@
+/* css/buttons.css */
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-button {
+  display: block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-text-headings);
+  font-weight: 700; /* Bold */
+  font-size: var(--font-size-button);
+  font-family: var(--font-main);
+  text-align: center;
+  border: 1px solid var(--color-border-medium);
+  transition: transform 0.2s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.social-button i {
+  margin-right: 10px;
+}
+
+.social-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  filter: brightness(1.15);
+  box-shadow: 0 4px 15px var(--color-shadow-dark);
+}
+
+.social-button.linkedin {
+  background-color: var(--color-btn-linkedin);
+}
+.social-button.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+.social-button.github {
+  background-color: var(--color-btn-github);
+}
+.social-button.medium {
+  background-color: var(--color-btn-medium);
+}
+.social-button.email {
+  background-color: var(--color-btn-email);
+}

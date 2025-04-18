@@ -1,0 +1,10 @@
+/* css/style.css */
+
+@import url("base.css");
+@import url("card.css");
+@import url("tabs.css");
+@import url("buttons.css");
+@import url("projects.css");
+@import url("services.css");
+@import url("404.css");
+@import url("responsive.css");

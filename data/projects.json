@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Cryptoolsec",
+    "repoUrl": "https://github.com/L0g0rhythm/Cryptoolsec",
+    "description": "Secure Python CLI & GUI tool for efficient file/stream encryption & decryption (AES-256-GCM, streaming I/O). Supports passwords (Argon2id+Salt) or key files. Built for security and automation.",
+    "demoUrl": null,
+    "articleUrl": null
+  },
+  {
+    "title": "EITIN",
+    "repoUrl": "https://github.com/L0g0rhythm/EITIN",
+    "description": "PowerShell script for automated IT inventory. Collects detailed system hardware, software, network, and security information, running with elevated privileges to ensure data completeness.",
+    "demoUrl": null,
+    "articleUrl": null
+  },
+  {
+    "title": "MDex",
+    "repoUrl": "https://github.com/L0g0rhythm/MDex",
+    "description": "Python script to download manga chapters from MangaDex API and automatically create PDFs. Supports multiple languages, interactive/CLI modes, and flexible selection.",
+    "demoUrl": null,
+    "articleUrl": null
+  },
+  {
+    "title": "Control-Aegis",
+    "repoUrl": "https://github.com/L0g0rhythm/Control-Aegis",
+    "description": "PowerShell module for managing port blocks/exceptions (Firewall) and domains (Hosts file) on Windows using a config.json file, with logging and rollback.",
+    "demoUrl": null,
+    "articleUrl": null
+  },
+  {
+    "title": "WinNetDiag",
+    "repoUrl": "https://github.com/L0g0rhythm/WinNetDiag",
+    "description": "Interactive PowerShell tool for Windows network diagnostics/repair. Menu includes progressive checks/fixes (Light to Deep Reset option), targeted analysis, connection/service checks, and detailed logs. For IT support.",
+    "demoUrl": null,
+    "articleUrl": null
+  },
+  {
+    "title": "WinOpti",
+    "repoUrl": "https://github.com/L0g0rhythm/WinOpti",
+    "description": "WinOpti is an optimization script for Windows that enhances system performance by cleaning temporary files, clearing browser caches, removing unnecessary logs, and terminating resource-hogging processes, providing a faster and more efficient experience.",
+    "demoUrl": null,
+    "articleUrl": null
+  },
+  {
+    "title": "SysStorageCheck",
+    "repoUrl": "https://github.com/L0g0rhythm/SysStorageCheck",
+    "description": "PowerShell script for system storage analysis, disk monitoring, large file detection, and integrity verification with hash, generating reports for IT infrastructure optimization.",
+    "demoUrl": null,
+    "articleUrl": null
+  },
+  {
+    "title": "Auto-Clicker",
+    "repoUrl": "https://github.com/L0g0rhythm/Auto-Clicker",
+    "description": "A simple AutoHotkey script to automate mouse clicks for repetitive tasks. Ideal for games or automation processes that require continuous clicking.",
+    "demoUrl": null,
+    "articleUrl": null
+  }
+]

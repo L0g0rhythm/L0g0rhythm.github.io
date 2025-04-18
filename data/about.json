@@ -1,0 +1,19 @@
+{
+  "introduction": "Cybersecurity Architect specializing in AI and Automation, based in Recife",
+  "flag": {
+    "src": "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f1e7-1f1f7.png",
+    "alt": "Brazil flag"
+  },
+  "focus": "I focus on building secure, efficient systems and optimizing IT infrastructure. Always learning and exploring new frontiers.",
+  "interests": [
+    {
+      "emoji": "🔭",
+      "text": "Studying Astrophysics & Cosmology (Sagan, Hawking, Einstein fan)"
+    },
+    { "emoji": "✍️", "text": "Creating Tech Content" },
+    {
+      "emoji": "🎮",
+      "text": "Geek Culture Enthusiast (Anime, Manga, RPGs: PoE, Dragon Age, AC)"
+    }
+  ]
+}

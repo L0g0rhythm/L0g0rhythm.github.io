@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Digital Enablement & Personal Security",
+    "description": "Guidance on safe tech use (email, social media), device protection, secure practices, backups, and accessibility setup for individuals."
+  },
+  {
+    "title": "Remote IT Support (Individual)",
+    "description": "Remote assistance for troubleshooting computer problems, software issues, and connectivity for personal users."
+  },
+  {
+    "title": "System Optimization (Standard & Gamer)",
+    "description": "OS performance tuning for improved speed and responsiveness in daily use and gaming."
+  },
+  {
+    "title": "Cybersecurity Consulting (Blue Team)",
+    "description": "Defensive security services: Threat Intel integration, SIEM configuration, Incident Response readiness, and Forensics preparation."
+  },
+  {
+    "title": "IT Infrastructure Security & Compliance",
+    "description": "Auditing, hardening, and automating IT infrastructure security (on-prem/cloud) aligned with best practices and compliance (LGPD)."
+  },
+  {
+    "title": "Automation for Security & Infrastructure",
+    "description": "Custom script and tool development to improve efficiency in security operations and IT infrastructure management."
+  },
+  {
+    "title": "Static Website Development",
+    "description": "Building fast, secure, modern static websites (HTML/CSS/JS) for portfolios, landing pages, etc., including responsive design."
+  },
+  {
+    "title": "Website Maintenance & Updates",
+    "description": "Ongoing support for website updates, security checks, performance monitoring, and content adjustments."
+  }
+]

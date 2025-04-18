@@ -1,0 +1,99 @@
+/* css/projects.css */
+
+/* H2 rule is inherited from tabs.css */
+
+.project-list {
+  max-height: 340px; /* Restored example max height */
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-right: -10px;
+  padding-top: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(154, 78, 252, 0.3) transparent;
+}
+.project-list::-webkit-scrollbar {
+  width: 8px;
+}
+.project-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.project-list::-webkit-scrollbar-thumb {
+  background-color: rgba(154, 78, 252, 0.3);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.project-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(154, 78, 252, 0.5);
+}
+
+.project-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-light);
+  text-align: left;
+}
+.project-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  border-bottom: none;
+}
+
+.project-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: var(--font-size-project-title);
+  font-family: var(--font-headings);
+  font-weight: 400;
+  text-align: left;
+}
+.project-title-link {
+  color: var(--color-primary-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+.project-title-link:hover {
+  color: var(--color-text-light);
+  text-decoration: underline;
+}
+.project-title-link i {
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.project-description {
+  color: var(--color-text-medium);
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: var(--font-main);
+  font-weight: 300;
+}
+
+.project-extra-links {
+  margin-top: 10px;
+  text-align: left;
+}
+.project-extra-link {
+  color: var(--color-text-dark);
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-right: 15px;
+  display: inline-block;
+  transition: color 0.3s ease;
+  font-family: var(--font-main);
+  font-weight: 400;
+}
+.project-extra-link:hover {
+  color: var(--color-primary-accent);
+  text-decoration: underline;
+}
+.project-extra-link i {
+  margin-right: 5px;
+}

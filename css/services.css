@@ -1,0 +1,58 @@
+/* css/services.css */
+
+/* H2 rule is inherited from tabs.css */
+
+.service-list {
+  max-height: 340px; /* Restored example max height */
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-right: -10px;
+  padding-top: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(154, 78, 252, 0.3) transparent;
+}
+.service-list::-webkit-scrollbar {
+  width: 8px;
+}
+.service-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.service-list::-webkit-scrollbar-thumb {
+  background-color: rgba(154, 78, 252, 0.3);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.service-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(154, 78, 252, 0.5);
+}
+
+.service-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-border-light);
+  text-align: left;
+}
+.service-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.service-title {
+  color: var(--color-primary-accent);
+  font-size: 1.05em;
+  font-family: var(--font-headings);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.service-description {
+  color: var(--color-text-medium);
+  font-size: var(--font-size-body);
+  font-family: var(--font-main);
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
