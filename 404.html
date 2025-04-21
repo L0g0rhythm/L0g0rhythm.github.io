@@ -6,6 +6,28 @@
     <title>404 - Page Not Found</title>
     <meta name="robots" content="noindex" />
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#9a4efc" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +37,6 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/synthwave-background.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -25,12 +46,9 @@
     <div class="background-container"></div>
 
     <div class="error-container">
-      <pre class="ascii-art">
-[error] :: 404
+      <pre class="ascii-art">[error] :: 404
 > Route not found in the Grid_
-> Returning to base...█
-        </pre
-      >
+> Returning to base...<span class="blinking-cursor">█</span></pre>
       <h1>404: Signal Lost</h1>
       <p>
         🧐 Seems this coordinate doesn't exist in my universe. Check the URL or
