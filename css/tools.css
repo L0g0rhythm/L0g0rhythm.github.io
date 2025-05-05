@@ -1,0 +1,68 @@
+/* css/tools.css */
+
+.tool-list {
+    max-height: 340px;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-right: -10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(154, 78, 252, 0.3) transparent;
+}
+.tool-list::-webkit-scrollbar { width: 8px; }
+.tool-list::-webkit-scrollbar-track { background: transparent; }
+.tool-list::-webkit-scrollbar-thumb { background-color: rgba(154, 78, 252, 0.3); border-radius: 10px; border: 2px solid transparent; background-clip: content-box; }
+.tool-list::-webkit-scrollbar-thumb:hover { background-color: rgba(154, 78, 252, 0.5); }
+
+.tool-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border-light);
+    text-align: left;
+}
+.tool-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: none;
+}
+
+.tool-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: var(--font-size-project-title);
+    font-family: var(--font-headings);
+    font-weight: 400;
+    text-align: left;
+}
+
+.tool-title-link {
+    color: var(--color-primary-accent);
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+.tool-title-link:hover {
+    color: var(--color-text-light);
+    text-decoration: underline;
+}
+.tool-title-link i {
+    margin-right: 8px;
+    font-size: 0.9em;
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tool-description {
+    color: var(--color-text-medium);
+    font-size: 0.9em;
+    font-family: var(--font-main);
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0;
+}
