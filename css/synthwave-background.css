@@ -10,8 +10,7 @@
   z-index: -1;
   overflow: hidden;
 
-  background-image:
-        /* Star layers - Maximum Density */ radial-gradient(
+  background-image: radial-gradient(
       1.5px 1.5px at 20% 15%,
       var(--color-text-light),
       transparent
@@ -272,15 +271,12 @@
   background-repeat: no-repeat;
 }
 
-/* Removed ::before and ::after rules for the grid */
-
 @media (max-width: 600px) {
   .background-container {
-    /* Removed ::before, ::after { content: none; } */
     transform: none;
     mask-image: none;
     -webkit-mask-image: none;
-    background-image: none; /* Remove stars on mobile */
+    background-image: none;
     background: linear-gradient(
       to bottom,
       var(--color-bg-medium),
