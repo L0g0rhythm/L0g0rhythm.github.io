@@ -1,151 +1,82 @@
 /* css/responsive.css */
 
 @media (max-width: 600px) {
-  /* Base */
   body {
-    perspective: none;
+      perspective: none;
   }
 
-  /* Card */
-  .profile-card {
-    padding: 20px 25px;
-    max-width: 90%;
-  }
-  h1 {
-    font-size: var(--font-size-h1-mobile);
-  }
-  .handle {
-    font-size: var(--font-size-handle-mobile);
-    margin-top: -6px;
-    margin-bottom: 12px;
-  }
-  .subtitle {
-    font-size: var(--font-size-subtitle-mobile);
-    margin-bottom: 15px;
-  }
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-  }
+  .profile-card { padding: 20px 25px; max-width: 90%; }
+  h1 { font-size: var(--font-size-h1-mobile); }
+  .handle { font-size: var(--font-size-handle-mobile); margin-top: -6px; margin-bottom: 12px; }
+  .subtitle { font-size: var(--font-size-subtitle-mobile); margin-bottom: 15px; }
+  .profile-picture { width: 100px; height: 100px; }
 
-  /* Tabs */
-  .tab-icon {
-    font-size: var(--font-size-tab-icon-mobile);
-  }
-  .tabs {
-    gap: 25px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-  }
+  .tab-icon { font-size: var(--font-size-tab-icon-mobile); }
+  .tabs { gap: 25px; margin-bottom: 20px; padding-bottom: 10px; }
 
-  /* Tab Content Area & Specific Content */
   .tab-content-area {
-    height: auto;
+      height: auto;
   }
-  #about-content h2,
-  #social-content h2,
-  #projects-content h2,
-  #services-content h2 {
-    font-size: var(--font-size-tab-title-mobile);
-    margin-bottom: 15px;
-  }
-  #about-content p {
-    font-size: var(--font-size-body-mobile);
-  }
-  .interests-list {
-    margin-top: 15px;
-  }
-  .interests-list li {
-    font-size: var(--font-size-body-mobile);
-    margin-bottom: 8px;
-  }
-  .interests-list li span[aria-hidden="true"] {
-    margin-right: 8px;
-    min-width: 1.2em;
+  #about-content h2, #social-content h2, #projects-content h2, #services-content h2, #tools-content h2 {
+      font-size: var(--font-size-tab-title-mobile);
+      margin-bottom: 15px;
   }
 
-  /* Buttons */
-  .social-button {
-    padding: 10px 15px;
-    font-size: var(--font-size-button-mobile);
-  }
-  .social-buttons {
-    gap: 12px;
-  }
-  .error-button {
-    padding: 8px 16px;
-    font-size: var(--font-size-button-mobile);
-  }
+  #about-content p { font-size: var(--font-size-body-mobile); }
+  .interests-list { margin-top: 15px; }
+  .interests-list li { font-size: var(--font-size-body-mobile); margin-bottom: 8px; }
+  .interests-list li span[aria-hidden="true"] { margin-right: 8px; min-width: 1.2em; }
 
-  /* Projects (Vertical Layout Responsive) */
-  .project-list {
-    max-height: 260px;
-    padding-right: 5px;
-    margin-right: -5px;
-  }
-  .project-list::-webkit-scrollbar {
-    width: 6px;
-  }
-  .project-item {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-  }
-  .project-item:last-child {
-    padding-bottom: 0;
-  }
-  .project-title {
-    font-size: var(--font-size-project-title-mobile);
-  }
-  .project-description {
-    font-size: var(--font-size-body-mobile);
-    font-weight: 300;
-    margin-bottom: 8px;
-  }
-  .project-extra-links {
-    margin-top: 8px;
-  }
-  .project-extra-link {
-    font-size: 0.85em;
-    margin-right: 12px;
-  }
+  .social-button { padding: 10px 15px; font-size: var(--font-size-button-mobile); }
+  .social-buttons { gap: 12px; }
 
-  /* Services (Responsive) */
-  .service-list {
-    max-height: 260px;
-    padding-right: 5px;
-    margin-right: -5px;
-  }
-  .service-list::-webkit-scrollbar {
-    width: 6px;
-  }
-  .service-item {
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-  }
-  .service-title {
-    font-size: 1em;
-  }
-  .service-description {
-    font-size: var(--font-size-body-mobile);
-  }
+  .error-button { padding: 8px 16px; font-size: var(--font-size-button-mobile); }
 
-  /* Removed Skills Responsive Rules */
+  /* Projects Tab (Vertical Layout Responsive) */
+  .project-list { max-height: 260px; padding-right: 5px; margin-right: -5px; }
+  .project-list::-webkit-scrollbar { width: 6px; }
+  .project-item { margin-bottom: 15px; padding-bottom: 15px; }
+  .project-item:last-child { padding-bottom: 0; }
+  .project-title { font-size: var(--font-size-project-title-mobile); } /* Uses H heading variable */
+  .project-description { font-size: var(--font-size-body-mobile); font-weight: 300; margin-bottom: 8px; }
+  .project-extra-links { margin-top: 8px; }
+  .project-extra-link { font-size: 0.85em; margin-right: 12px; }
+
+  /* Services Tab (Responsive) */
+  .service-list { max-height: 260px; padding-right: 5px; margin-right: -5px; }
+  .service-list::-webkit-scrollbar { width: 6px; }
+  .service-item { margin-bottom: 12px; padding-bottom: 12px; }
+  .service-title { font-size: 1.0em; } /* Uses H heading variable */
+  .service-description { font-size: var(--font-size-body-mobile); }
+
+  /* Tools Tab (Responsive - CORRECTED to Vertical Style) */
+  .tool-list {
+      max-height: 260px; /* Match other lists */
+      padding-right: 5px;
+      margin-right: -5px;
+  }
+  .tool-list::-webkit-scrollbar { width: 6px; }
+  .tool-item { /* Style like project/service item */
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+  }
+  .tool-item:last-child { padding-bottom: 0; }
+  .tool-title {
+      font-size: var(--font-size-project-title-mobile); /* Match project title size */
+      margin-bottom: 5px;
+  }
+  .tool-description {
+      font-size: var(--font-size-body-mobile); /* Match other descriptions */
+      font-weight: 300; /* Ensure light */
+  }
+  /* Removed rules specific to .tool-item-link padding/font-size */
+
 
   /* 404 Page Container */
-  .error-container {
-    min-height: 70vh;
-  }
-  .error-container h1 {
-    font-size: 1.8em;
-  }
-  .error-container p {
-    font-size: 1em;
-    margin-bottom: 25px;
-  }
-  .ascii-art {
-    font-size: 0.9em;
-  }
-  .error-navigation {
-    gap: 10px;
-  }
+  .error-container { min-height: 70vh; }
+  .error-container h1 { font-size: 1.8em; }
+  .error-container p { font-size: 1.0em; margin-bottom: 25px; }
+  .ascii-art { font-size: 0.9em; }
+  .error-navigation { gap: 10px; }
+
 }
