@@ -14,7 +14,7 @@ export function message(text, status = 'success') {
 
     Toastify({
         text: text,
-        duration: 3000,
+        duration: 1000,
         close: true, // Added close button for accessibility/convenience
         gravity: "top", // Changed from bottom - POSITION TOP
         position: "right", // Changed from center - POSITION RIGHT
