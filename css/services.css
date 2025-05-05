@@ -1,9 +1,7 @@
 /* css/services.css */
 
-/* H2 rule is inherited from tabs.css */
-
 .service-list {
-  max-height: 340px; /* Restored example max height */
+  max-height: 340px;
   overflow-y: auto;
   padding-right: 10px;
   margin-right: -10px;
