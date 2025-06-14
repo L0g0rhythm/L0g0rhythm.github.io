@@ -1,0 +1,14 @@
+/* src/css/main.css */
+
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
+
+@import url("./layout/main.css");
+
+@import url("./components/logo.css");
+@import url("./components/password_display.css");
+@import url("./components/buttons.css");
+
+@import url("./background/stars.css");
+@import url("./background/animations.css");
