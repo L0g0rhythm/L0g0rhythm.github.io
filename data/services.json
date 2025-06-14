@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Capacitação Digital e Segurança Pessoal",
+    "description": "Orientação sobre o uso seguro da tecnologia (e-mail, redes sociais), proteção de dispositivos, práticas seguras, backups e configuração de acessibilidade para usuários individuais."
+  },
+  {
+    "title": "Suporte de TI Remoto (Individual)",
+    "description": "Assistência remota para solução de problemas de computador, software e conectividade para usuários domésticos."
+  },
+  {
+    "title": "Otimização de Sistema (Padrão e Gamer)",
+    "description": "Ajuste de desempenho do sistema operacional para maior velocidade e responsividade no uso diário e em jogos."
+  },
+  {
+    "title": "Consultoria em Cibersegurança (Blue Team)",
+    "description": "Serviços de segurança defensiva: Integração de Inteligência de Ameaças (Threat Intel), configuração de SIEM, prontidão para Resposta a Incidentes e preparação para Análise Forense."
+  },
+  {
+    "title": "Segurança e Conformidade de Infraestrutura de TI",
+    "description": "Auditoria, fortalecimento (hardening) e automação da segurança da infraestrutura de TI (local/nuvem), alinhados às melhores práticas e conformidade (LGPD)."
+  },
+  {
+    "title": "Automação para Segurança e Infraestrutura",
+    "description": "Desenvolvimento de scripts e ferramentas personalizadas para melhorar a eficiência em operações de segurança e no gerenciamento da infraestrutura de TI."
+  },
+  {
+    "title": "Desenvolvimento de Sites Estáticos",
+    "description": "Criação de sites estáticos rápidos, seguros e modernos (HTML/CSS/JS) para portfólios, landing pages, etc., incluindo design responsivo."
+  },
+  {
+    "title": "Manutenção e Atualizações de Sites",
+    "description": "Suporte contínuo para atualizações de sites, verificações de segurança, monitoramento de desempenho e ajustes de conteúdo."
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Password Generator",
+    "url": "tools/password-generator/",
+    "description": "Password Generator é uma ferramenta web que gera senhas seguras no estilo Apple, permitindo que o usuário as visualize e copie facilmente através de uma interface simples.",
+    "iconClass": "fas fa-key"
+  }
+]

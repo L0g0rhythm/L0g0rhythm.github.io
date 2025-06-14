@@ -1,0 +1,51 @@
+/*
+ * Estilos Base
+ * Define a aparência padrão para os elementos HTML mais comuns.
+*/
+
+body {
+  font-family: var(--font-main);
+  font-weight: 300;
+  color: var(--color-text-light);
+  background-color: var(
+    --color-bg-dark
+  ); /* Cor de fallback caso o fundo dinâmico falhe */
+  overflow-x: hidden; /* Previne barras de rolagem horizontais */
+
+  /* Centraliza o conteúdo (card ou mensagem de erro) na tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-headings);
+  font-weight: 400;
+  color: var(--color-text-headings);
+}
+
+/* Melhora a acessibilidade do foco para usuários de teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Classes utilitárias */
+.flag-icon {
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.empty-list-message,
+.fatal-error {
+  color: var(--color-text-medium);
+  text-align: center;
+  padding: 20px;
+}

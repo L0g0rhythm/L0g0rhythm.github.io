@@ -1,0 +1,68 @@
+/*
+ * Responsividade
+ * Contém a Media Query para adaptar o layout para telas menores.
+*/
+
+/* Ponto de quebra ajustado para tablets em modo retrato e celulares */
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start; /* Alinha o card no topo em telas menores */
+    padding: 15px;
+  }
+
+  /* Retorna o card para o layout de coluna única */
+  .profile-card {
+    flex-direction: column;
+    max-width: 440px;
+    width: 100%;
+    height: auto; /* Remove a altura fixa em mobile para se ajustar ao conteúdo */
+    max-height: 90vh;
+    padding: 25px;
+    overflow-y: auto;
+    transform: none !important; /* Garante que o efeito 3D seja desativado em mobile */
+  }
+
+  /* Ajusta a sidebar para o layout vertical */
+  .profile-sidebar {
+    flex: none; /* Reseta as regras de crescimento do flex */
+    width: 100%;
+    padding: 0;
+    border-right: none; /* Remove a divisória da direita */
+    border-bottom: 1px solid var(--color-card-border); /* Adiciona uma divisória inferior */
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
+
+  /* Ajusta a área de conteúdo principal */
+  .profile-main {
+    flex: none; /* Reseta as regras de crescimento do flex */
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Ajustes finos nos componentes para mobile */
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tabs {
+    margin-bottom: 20px;
+  }
+
+  /* Ajusta a altura máxima das listas para telas menores */
+  .project-list,
+  .service-list,
+  .tool-list {
+    max-height: 280px;
+  }
+}

@@ -1,0 +1,30 @@
+/*
+ * PONTO DE ENTRADA PRINCIPAL DO CSS
+ * Este arquivo importa todos os outros módulos de estilo na ordem correta.
+ * A ordem dos imports é crucial para a cascata de estilos.
+*/
+
+/* 1. Base e Globais */
+@import url("base/_reset.css");
+@import url("base/_variables.css");
+@import url("base/_base.css");
+
+/* 2. Layout */
+@import url("layout/_background.css");
+
+/* 3. Componentes */
+@import url("components/_card.css");
+@import url("components/_sidebar.css");
+@import url("components/_main-content.css");
+@import url("components/_tabs.css");
+@import url("components/_social-icons.css");
+@import url("components/_lists.css");
+
+/* 4. Páginas Específicas */
+@import url("pages/_404.css"); /* <-- LINHA RESTAURADA */
+
+/* 5. Utilitários */
+@import url("utilities/_animations.css");
+
+/* 6. Responsividade (Carregado por último) */
+@import url("responsive.css");

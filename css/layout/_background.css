@@ -1,0 +1,149 @@
+/*
+ * Layout: Fundo (Versão Premium Aprimorada)
+ * Fundo com nébula, campo de estrelas denso e animação de paralaxe infinita.
+*/
+
+.background-container {
+  background-color: var(--color-bg-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+/* Nébula Animada */
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200vmax;
+  height: 200vmax;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 109, 240, 0.2),
+    rgba(171, 106, 255, 0.15) 25%,
+    rgba(34, 193, 195, 0.1) 50%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  animation: rotate-nebula 100s linear infinite;
+  z-index: -2;
+}
+
+/* --- CAMPO DE ESTRELAS INFINITO E DENSO --- */
+
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Base para cada camada de estrelas */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  animation: move-stars linear infinite;
+}
+
+/* A MÁGICA DO LOOP INFINITO: Cria uma cópia da camada de estrelas */
+.stars::after {
+  content: "";
+  position: absolute;
+  /* Posiciona a cópia logo abaixo da original, fora da tela */
+  top: 200vh;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  /* Herda exatamente as mesmas estrelas (box-shadow) da camada original */
+  box-shadow: inherit;
+}
+
+/* Camada 1: Distante e Lenta (MAIS ESTRELAS) */
+#stars-1 {
+  animation-duration: 150s;
+  box-shadow:
+    18vw 4vh 1px #fff,
+    82vw 8vh 1px #fff,
+    91vw 31vh 0px #fff,
+    8vw 35vh 1px #fff,
+    37vw 59vh 1px #fff,
+    56vw 66vh 0px #fff,
+    90vw 71vh 1px #fff,
+    15vw 75vh 1px #fff,
+    62vw 82vh 0px #fff,
+    8vw 90vh 1px #fff,
+    48vw 98vh 1px #fff,
+    98vw 9vh 0px #fff,
+    2vw 20vh 1px #fff,
+    54vw 33vh 1px #fff,
+    76vw 42vh 0px #fff,
+    23vw 60vh 1px #fff,
+    77vw 91vh 1px #fff,
+    93vw 53vh 1px #fff,
+    4vw 25vh 0px #fff,
+    29vw 44vh 1px #fff,
+    67vw 52vh 1px #fff,
+    3vw 12vh 0px #fff,
+    45vw 87vh 1px #fff,
+    81vw 64vh 1px #fff;
+}
+
+/* Camada 2: Intermediária (MAIS ESTRELAS) */
+#stars-2 {
+  animation-duration: 100s;
+  box-shadow:
+    6vw 15vh 1px #fff,
+    43vw 22vh 0px #fff,
+    87vw 29vh 1px #fff,
+    52vw 41vh 1px #fff,
+    9vw 52vh 0px #fff,
+    74vw 61vh 1px #fff,
+    97vw 68vh 1px #fff,
+    32vw 77vh 0px #fff,
+    19vw 85vh 1px #fff,
+    68vw 94vh 1px #fff,
+    95vw 2vh 1px #fff,
+    22vw 11vh 0px #fff,
+    49vw 48vh 1px #fff,
+    71vw 55vh 1px #fff,
+    85vw 74vh 0px #fff,
+    3vw 83vh 1px #fff,
+    61vw 18vh 1px #fff,
+    8vw 38vh 0px #fff,
+    34vw 81vh 1px #fff,
+    58vw 6vh 1px #fff,
+    21vw 99vh 0px #fff,
+    79vw 45vh 1px #fff;
+}
+
+/* Camada 3: Próxima e Rápida (MAIS ESTRELAS) */
+#stars-3 {
+  animation-duration: 50s;
+  box-shadow:
+    25vw 5vh 2px #fff,
+    5vw 10vh 3px #fff,
+    95vw 15vh 2px #fff,
+    75vw 25vh 3px #fff,
+    50vw 35vh 2px #fff,
+    15vw 45vh 3px #fff,
+    80vw 55vh 2px #fff,
+    40vw 65vh 3px #fff,
+    10vw 75vh 2px #fff,
+    70vw 85vh 3px #fff,
+    30vw 95vh 2px #fff,
+    55vw 2vh 3px #fff,
+    90vw 40vh 2px #fff,
+    -5vw 60vh 3px #fff,
+    48vw 77vh 2px #fff,
+    66vw 89vh 3px #fff;
+}

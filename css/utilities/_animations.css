@@ -1,0 +1,64 @@
+/*
+ * Utilitários: Animações
+ * Centraliza todas as regras de @keyframes usadas no projeto.
+*/
+
+/* Animação de entrada para o card principal */
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animação de rotação para a nébula do fundo */
+@keyframes rotate-nebula {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Animação de fade-in para o conteúdo das abas */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação do cursor piscando na página 404 */
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Animação de rolagem infinita para as estrelas */
+@keyframes move-stars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    /* Move o dobro da altura da tela para criar o efeito de loop contínuo */
+    transform: translateY(-200vh);
+  }
+}

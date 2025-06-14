@@ -1,0 +1,45 @@
+/*
+ * Componente: Card (Versão Final e Corrigida)
+ * Estilo principal para o card de perfil, preparado para 3D.
+*/
+
+/*
+ * O .scene-container atua como um invólucro para a animação de entrada
+ * e para definir a perspectiva 3D, evitando conflitos com o card.
+*/
+.scene-container {
+  animation: card-enter 0.7s ease-out forwards;
+  perspective: 2000px;
+}
+
+/*
+ * O .profile-card contém o design "Liquid Glass" e responde ao efeito
+ * de inclinação 3D controlado pelo JavaScript.
+*/
+.profile-card {
+  display: flex;
+  align-items: stretch;
+  max-width: 950px;
+  width: 95%;
+  height: 580px; /* Altura fixa para consistência em telas de desktop */
+  position: relative;
+  overflow: hidden;
+
+  /* Efeito de Vidro (Glassmorphism) */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)),
+    var(--color-card-bg);
+
+  /* Sombra para profundidade e borda sutil */
+  box-shadow:
+    0 10px 35px 0 var(--color-shadow-diffuse),
+    inset 0 0 1.5px 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-card-border);
+  border-radius: 18px;
+
+  /* Propriedades para habilitar e suavizar a transformação 3D */
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+}
