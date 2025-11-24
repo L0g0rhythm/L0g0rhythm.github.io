@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -8,6 +8,8 @@
     />
     <title>404 | SIGNAL LOST</title>
 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com http://me.kis.v2.scr.kaspersky-labs.com ws://me.kis.v2.scr.kaspersky-labs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self' ws://me.kis.v2.scr.kaspersky-labs.com;">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,12 +17,11 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/base/variables.css" />
-    <link rel="stylesheet" href="css/base/reset.css" />
-    <link rel="stylesheet" href="css/base/base.css" />
-    <link rel="stylesheet" href="css/layout/background.css" />
-
-    <link rel="stylesheet" href="css/pages/404.css" />
+    <link rel="stylesheet" href="./css/base/variables.css" />
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/base/base.css" />
+    <link rel="stylesheet" href="./css/layout/background.css" />
+    <link rel="stylesheet" href="./css/pages/404.css" />
   </head>
   <body>
     <div class="background-container">
@@ -36,18 +37,49 @@
 
       <p class="error-msg">// COORDINATES NOT FOUND</p>
 
-      <a href="/" class="return-btn"> INITIALIZE RETURN SEQUENCE </a>
+      <a href="./" class="return-btn" id="return-btn"> INITIALIZE RETURN SEQUENCE </a>
     </main>
 
-    <script>
-      // Aplica a cor de tema escolhida pelo usuário se existir
-      const savedTheme = localStorage.getItem("userTheme");
-      if (savedTheme) {
-        document.documentElement.style.setProperty(
-          "--accent-primary",
-          savedTheme
-        );
-      }
+    <script type="module">
+      import { audioSystem } from "./js/core/audioSynth.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Restauração de Tema (Visual Consistency)
+        const savedTheme = localStorage.getItem("userTheme");
+        if (savedTheme) {
+          document.documentElement.style.setProperty("--accent-primary", savedTheme);
+        }
+
+        // 2. Inicialização do Subsistema de Áudio
+        // O áudio precisa de uma interação para destravar
+        const unlockAudio = () => {
+          if (audioSystem.analyser?.context.state === "suspended") {
+             audioSystem.analyser.context.resume();
+          }
+          // Inicializa o contexto se ainda não existir
+          audioSystem.initContext();
+          
+          // Remove os listeners após a primeira interação
+          document.removeEventListener("click", unlockAudio);
+          document.removeEventListener("keydown", unlockAudio);
+        };
+
+        document.addEventListener("click", unlockAudio);
+        document.addEventListener("keydown", unlockAudio);
+
+        // 3. Bind de Áudio no Botão de Retorno
+        const btn = document.getElementById("return-btn");
+        if (btn) {
+          btn.addEventListener("mouseenter", () => {
+            if (audioSystem.enabled) audioSystem.playHover();
+          });
+          
+          btn.addEventListener("click", (e) => {
+            if (audioSystem.enabled) audioSystem.playClick();
+            // O link funcionará normalmente após o clique
+          });
+        }
+      });
     </script>
   </body>
 </html>
