@@ -1,0 +1,70 @@
+/*
+ * Responsividade (Versão Definitiva com Translação do Card)
+ * Criado por Gemini em 17/06/2025 para L0g0rhythm
+*/
+@media (max-width: 768px) {
+  /* Garante que o corpo não tenha rolagem indesejada durante a animação */
+  body {
+    align-items: flex-start;
+    padding: 15px;
+    overflow: hidden;
+  }
+
+  .scene-container {
+    perspective: none;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    max-height: 90vh;
+    padding: 25px;
+    overflow: hidden;
+    /* Esta transição, vinda do card.css, é que permite a animação suave */
+    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  /* --- LÓGICA CORRETA E FINAL DO "MODO FOCO" --- */
+
+  /**
+   * REGRA PRINCIPAL:
+   * Quando a classe .focus-mode é adicionada, o card inteiro desliza para cima.
+   * O valor de -255px é o ajuste que move o conteúdo para a posição correta.
+   */
+  .profile-card.focus-mode {
+    transform: translateY(-255px);
+  }
+
+  /**
+   * REGRA DE APOIO 1:
+   * Esconde a sidebar suavemente para garantir um visual limpo.
+   */
+  .profile-card.focus-mode .profile-sidebar {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .profile-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--color-card-border);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+
+  .profile-main {
+    width: 100%;
+    padding: 0;
+  }
+
+  /**
+   * REGRA DE APOIO 2:
+   * Garante que a área de conteúdo seja alta o suficiente para preencher
+   * a tela e permitir a rolagem interna quando o card sobe.
+   */
+  .tab-content-area {
+    height: 70vh;
+    overflow-y: auto;
+  }
+}

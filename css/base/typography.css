@@ -1,0 +1,14 @@
+body {
+  font-family: var(--font-tech);
+  color: var(--text-main);
+  background-color: var(--bg-void); /* ISSO CORRIGE A TELA BRANCA */
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+}

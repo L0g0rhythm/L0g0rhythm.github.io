@@ -1,0 +1,15 @@
+:root {
+  /* Cores */
+  --bg-void: #050507;
+  --accent-primary: #9d4edd;
+  --text-main: #ffffff;
+  --text-muted: #8b8b9b;
+
+  /* Vidro */
+  --glass-bg: rgba(20, 20, 25, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Fontes */
+  --font-tech: "Space Grotesk", sans-serif;
+  --font-display: "Syncopate", sans-serif;
+}

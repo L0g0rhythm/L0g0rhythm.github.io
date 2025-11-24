@@ -1,0 +1,18 @@
+{
+  "pt": [
+    {
+      "title": "Password Generator",
+      "url": "tools/password-generator/",
+      "description": "Ferramenta web que gera senhas seguras no estilo Apple, permitindo visualização e cópia rápida através de uma interface minimalista.",
+      "iconClass": "fas fa-key"
+    }
+  ],
+  "en": [
+    {
+      "title": "Password Generator",
+      "url": "tools/password-generator/",
+      "description": "Web tool that generates secure Apple-style passwords, allowing for quick viewing and copying through a minimalist interface.",
+      "iconClass": "fas fa-key"
+    }
+  ]
+}

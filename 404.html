@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>404 | SIGNAL LOST</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/base.css" />
+    <link rel="stylesheet" href="css/layout/background.css" />
+
+    <link rel="stylesheet" href="css/pages/404.css" />
+  </head>
+  <body>
+    <div class="background-container">
+      <div class="starfield">
+        <div class="star-layer stars-1"></div>
+        <div class="star-layer stars-2"></div>
+      </div>
+      <div class="vignette-overlay"></div>
+    </div>
+
+    <main class="error-screen">
+      <h1 class="glitch-404" data-text="404" aria-label="Error 404">404</h1>
+
+      <p class="error-msg">// COORDINATES NOT FOUND</p>
+
+      <a href="/" class="return-btn"> INITIALIZE RETURN SEQUENCE </a>
+    </main>
+
+    <script>
+      // Aplica a cor de tema escolhida pelo usuário se existir
+      const savedTheme = localStorage.getItem("userTheme");
+      if (savedTheme) {
+        document.documentElement.style.setProperty(
+          "--accent-primary",
+          savedTheme
+        );
+      }
+    </script>
+  </body>
+</html>

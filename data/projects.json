@@ -1,0 +1,90 @@
+{
+  "pt": [
+    {
+      "title": "Cryptoolsec",
+      "repoUrl": "https://github.com/L0g0rhythm/Cryptoolsec",
+      "description": "Engine de criptografia AES-256-GCM com suporte a streams e proteção de memória. Interface CLI e GUI focada em operações seguras.",
+      "tags": ["PYTHON", "CRYPTOGRAPHY", "ARGON2ID"]
+    },
+    {
+      "title": "EITIN",
+      "repoUrl": "https://github.com/L0g0rhythm/EITIN",
+      "description": "Coletor de inteligência de sistema automatizado. Inventário profundo de hardware e software via PowerShell com privilégios elevados.",
+      "tags": ["POWERSHELL", "SYSADMIN", "AUDIT"]
+    },
+    {
+      "title": "MDex",
+      "repoUrl": "https://github.com/L0g0rhythm/MDex",
+      "description": "Automação de coleta de dados via API MangaDex com conversão PDF on-the-fly. Arquitetura assíncrona para alta performance.",
+      "tags": ["PYTHON", "API REST", "AUTOMATION"]
+    },
+    {
+      "title": "Control Aegis",
+      "repoUrl": "https://github.com/L0g0rhythm/Control-Aegis",
+      "description": "Módulo de controle de perímetro para Windows. Gerenciamento de Firewall e Hosts via arquivo de configuração JSON centralizado.",
+      "tags": ["POWERSHELL", "FIREWALL", "SECURITY"]
+    },
+    {
+      "title": "WinNetDiag",
+      "repoUrl": "https://github.com/L0g0rhythm/WinNetDiag",
+      "description": "Ferramenta de diagnóstico e reparo de stack de rede. Executa resets progressivos e análise de conectividade para suporte Nível 2/3.",
+      "tags": ["NETWORKING", "TROUBLESHOOTING", "CLI"]
+    },
+    {
+      "title": "WinOpt",
+      "repoUrl": "https://github.com/L0g0rhythm/WinOpti",
+      "description": "Script de otimização de kernel e limpeza de processos. Ajuste fino de telemetria e serviços para máxima performance (Low Latency).",
+      "tags": ["PERFORMANCE", "KERNEL", "GAMING"]
+    },
+    {
+      "title": "SysStorageCheck",
+      "repoUrl": "https://github.com/L0g0rhythm/SysStorageCheck",
+      "description": "Análise forense de armazenamento. Monitoramento de integridade (Hash), detecção de anomalias e relatórios de uso de disco.",
+      "tags": ["FORENSICS", "HASHING", "REPORTING"]
+    }
+  ],
+  "en": [
+    {
+      "title": "Cryptoolsec",
+      "repoUrl": "https://github.com/L0g0rhythm/Cryptoolsec",
+      "description": "AES-256-GCM encryption engine with stream support and memory protection. CLI and GUI interface focused on secure operations.",
+      "tags": ["PYTHON", "CRYPTOGRAPHY", "ARGON2ID"]
+    },
+    {
+      "title": "EITIN",
+      "repoUrl": "https://github.com/L0g0rhythm/EITIN",
+      "description": "Automated system intelligence collector. Deep hardware and software inventory via PowerShell with elevated privileges.",
+      "tags": ["POWERSHELL", "SYSADMIN", "AUDIT"]
+    },
+    {
+      "title": "MDex",
+      "repoUrl": "https://github.com/L0g0rhythm/MDex",
+      "description": "Data collection automation via MangaDex API with on-the-fly PDF conversion. Asynchronous architecture for high performance.",
+      "tags": ["PYTHON", "API REST", "AUTOMATION"]
+    },
+    {
+      "title": "Control Aegis",
+      "repoUrl": "https://github.com/L0g0rhythm/Control-Aegis",
+      "description": "Windows perimeter control module. Firewall and Hosts management via a centralized JSON configuration file.",
+      "tags": ["POWERSHELL", "FIREWALL", "SECURITY"]
+    },
+    {
+      "title": "WinNetDiag",
+      "repoUrl": "https://github.com/L0g0rhythm/WinNetDiag",
+      "description": "Network stack diagnosis and repair tool. Performs progressive resets and connectivity analysis for Level 2/3 support.",
+      "tags": ["NETWORKING", "TROUBLESHOOTING", "CLI"]
+    },
+    {
+      "title": "WinOpti",
+      "repoUrl": "https://github.com/L0g0rhythm/WinOpti",
+      "description": "Kernel optimization and process cleaning script. Fine-tuning of telemetry and services for maximum performance (Low Latency).",
+      "tags": ["PERFORMANCE", "KERNEL", "GAMING"]
+    },
+    {
+      "title": "SysStorageCheck",
+      "repoUrl": "https://github.com/L0g0rhythm/SysStorageCheck",
+      "description": "Storage forensic analysis. Integrity monitoring (Hash), anomaly detection, and disk usage reporting.",
+      "tags": ["FORENSICS", "HASHING", "REPORTING"]
+    }
+  ]
+}

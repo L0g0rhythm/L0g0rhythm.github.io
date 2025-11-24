@@ -1,0 +1,155 @@
+/* ARQUIVO: css/base/base.css */
+
+::selection {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b068ff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* cursor customizado para desktop */
+@media (min-width: 900px) {
+  body {
+    cursor: crosshair; /* Mira tática simples e elegante */
+  }
+
+  a,
+  button,
+  .nav-links li,
+  .service-card {
+    cursor: alias; /* Cursor de "link/ação" do sistema */
+  }
+}
+
+/* Respeito à preferência de movimento do usuário */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .starfield,
+  .vignette-overlay {
+    display: none;
+  } /* Remove fundo pesado */
+  .glitch-text::before,
+  .glitch-text::after {
+    display: none;
+  } /* Remove glitch piscante */
+}
+
+/* MODO DE IMPRESSÃO (CURRÍCULO) */
+@media print {
+  /* Reseta cores para tinta preta no papel branco */
+  body,
+  html,
+  #interface-viewport,
+  .view-section {
+    background: #fff !important;
+    color: #000 !important;
+    height: auto !important;
+    overflow: visible !important;
+    position: relative !important;
+    display: block !important;
+  }
+
+  /* Esconde elementos "Digitais" */
+  .navbar,
+  .background-container,
+  .sound-control,
+  .mobile-menu-btn,
+  .boot-screen,
+  .cmd-overlay,
+  .tech-stack,
+  .project-link,
+  canvas {
+    display: none !important;
+  }
+
+  /* Expande as seções para leitura corrida */
+  .view-section {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: static !important;
+    padding: 20px 0 !important;
+    border-bottom: 1px solid #ccc;
+    transform: none !important;
+  }
+
+  /* Ajusta tipografia para leitura */
+  h1,
+  h2,
+  h3 {
+    color: #000 !important;
+    text-shadow: none !important;
+    page-break-after: avoid;
+  }
+
+  p {
+    color: #333 !important;
+  }
+
+  /* Mostra URLs dos links para serem úteis no papel */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  /* Remove bordas e efeitos de vidro */
+  .glass-panel,
+  .service-card,
+  .about-container,
+  .project-row {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    color: #000 !important;
+  }
+}
+
+/* MODO DE ECONOMIA DE ENERGIA (Automático < 20% Bateria) */
+body.low-power .background-container::before {
+  display: none;
+} /* Desliga Nebula */
+body.low-power .glass-panel {
+  backdrop-filter: none;
+  background: rgba(10, 10, 15, 0.95);
+} /* Desliga Blur Pesado */
+body.low-power canvas {
+  opacity: 0;
+} /* Desliga Partículas e Matrix */
+body.low-power * {
+  animation-duration: 0s !important;
+  transition: none !important;
+} /* Desliga Animações */

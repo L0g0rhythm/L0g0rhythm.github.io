@@ -1,0 +1,99 @@
+/*
+ * Utilitários: Animações
+ * Centraliza todas as regras de @keyframes usadas no projeto.
+*/
+
+/* Animação de entrada para o card principal */
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animação de rotação para a nébula do fundo */
+@keyframes rotate-nebula {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Animação de fade-in para o conteúdo das abas */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação do cursor piscando na página 404 */
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Animação de rolagem infinita para as estrelas */
+@keyframes move-stars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    /* Move o dobro da altura da tela para criar o efeito de loop contínuo */
+    transform: translateY(-200vh);
+  }
+}
+
+/* ARQUIVO: css/utilities/animations.css */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe utilitária para controle via JS se necessário */
+.loaded .fade-in {
+  animation: fade-in-up 0.8s ease forwards;
+}
+
+/* Adicione ao final do animations.css */
+.service-card,
+.project-row,
+.spec-item,
+.bio-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.service-card.in-view,
+.project-row.in-view,
+.spec-item.in-view,
+.bio-text.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

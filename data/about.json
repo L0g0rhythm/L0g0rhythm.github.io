@@ -1,0 +1,26 @@
+{
+  "pt": {
+    "main_text": "Operando na interseção entre Engenharia de Software e Cibersegurança. Minha missão é construir sistemas que não apenas funcionam, mas que resistem ao caos. Com uma abordagem baseada no Estoicismo Digital, elimino o ruído para focar no essencial: Performance, Segurança e Elegância. Não escrevo apenas código; forjo soluções.",
+    "interests_title": "MÓDULOS DE PROCESSAMENTO",
+    "interests_list": [
+      { "emoji": "🌌", "text": "ASTROFÍSICA" },
+      { "emoji": "🏎️", "text": "ENG. DE PRECISÃO" },
+      { "emoji": "🛡️", "text": "DEFESA ATIVA" },
+      { "emoji": "🤖", "text": "AUTOMAÇÃO" },
+      { "emoji": "🧠", "text": "IA & NEURAL NETS" },
+      { "emoji": "🛠️", "text": "CRIADOR DE TOOLS" }
+    ]
+  },
+  "en": {
+    "main_text": "Operating at the intersection of Software Engineering and Cybersecurity. My mission is to build systems that not only function but withstand chaos. With an approach based on Digital Stoicism, I eliminate noise to focus on the essential: Performance, Security, and Elegance. I don't just write code; I forge solutions.",
+    "interests_title": "PROCESSING MODULES",
+    "interests_list": [
+      { "emoji": "🌌", "text": "ASTROPHYSICS" },
+      { "emoji": "🏎️", "text": "PRECISION ENG." },
+      { "emoji": "🛡️", "text": "ACTIVE DEFENSE" },
+      { "emoji": "🤖", "text": "AUTOMATION" },
+      { "emoji": "🧠", "text": "AI & NEURAL NETS" },
+      { "emoji": "🛠️", "text": "TOOLSMITHING" }
+    ]
+  }
+}

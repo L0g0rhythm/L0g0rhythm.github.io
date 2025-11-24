@@ -1,0 +1,26 @@
+/* ARQUIVO: css/style.css */
+
+/* 1. Núcleo */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/base.css"); /* Polimento global (seleção, scroll) */
+@import url("base/typography.css");
+
+/* 2. Layout */
+@import url("layout/structure.css"); /* Engine do SPA (No Scroll) */
+@import url("layout/background.css");
+
+/* 3. Componentes */
+@import url("components/navbar.css");
+@import url("components/hero.css"); /* Glitch e Neon */
+@import url("components/glass.css");
+@import url("components/about.css");
+@import url("components/cards.css");
+@import url("components/footer.css");
+@import url("components/loader.css");
+@import url("components/cmd.css");
+@import url("components/context-menu.css");
+
+/* 4. Extras */
+@import url("utilities/animations.css");
+@import url("responsive.css");
