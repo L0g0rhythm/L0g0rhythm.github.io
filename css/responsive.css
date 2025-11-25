@@ -1,7 +1,3 @@
-/*
- * Responsividade (Versão Definitiva com Translação do Card)
- * Criado por Gemini em 17/06/2025 para L0g0rhythm
-*/
 @media (max-width: 768px) {
   /* Garante que o corpo não tenha rolagem indesejada durante a animação */
   body {
@@ -68,3 +64,4 @@
     overflow-y: auto;
   }
 }
+
