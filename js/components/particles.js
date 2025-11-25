@@ -1,10 +1,5 @@
 /* FILE: js/components/particles.js */
 
-/**
- * @file particles.js
- * @description Lightweight particle system with performance throttling.
- */
-
 export function initParticles() {
   const canvas = document.createElement("canvas");
   canvas.style.position = "fixed";
