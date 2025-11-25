@@ -1,12 +1,4 @@
 /* FILE: js/main.js */
-
-/**
- * @file main.js
- * @description Core App Controller.
- * REFACTOR: Restored "Signal Lost" Tab Feature + Audio Feedback Logic.
- * @version 4.3.0-FULL-FEATURE
- */
-
 import { initParticles } from "./components/particles.js";
 import { loadAllData } from "./core/dataLoader.js";
 import { renderProfile } from "./components/renderer.js";
@@ -76,7 +68,7 @@ class AppController {
 
     this.initPageTitles();
     this.bindEvents();
-    this.initWindowEvents(); // RESTAURADO: Monitoramento de Aba (Signal Lost)
+    this.initWindowEvents(); // Monitoramento de Aba (Signal Lost)
     this.restoreTheme();
     this.updateLangUI(this.currentLang);
     this.translateStaticUI(this.currentLang);
