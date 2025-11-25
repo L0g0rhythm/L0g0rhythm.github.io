@@ -1,4 +1,5 @@
 /* ARQUIVO: js/core/dictionary.js */
+
 export const dictionary = {
   pt: {
     // Navegação
@@ -124,3 +125,4 @@ export const dictionary = {
     toast_theme: "THEME APPLIED",
   },
 };
+
