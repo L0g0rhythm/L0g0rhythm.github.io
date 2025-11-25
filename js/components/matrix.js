@@ -1,4 +1,5 @@
 /* ARQUIVO: js/components/matrix.js */
+
 export function startMatrixEffect() {
   // Cria o Canvas
   const canvas = document.createElement("canvas");
@@ -72,3 +73,4 @@ export function startMatrixEffect() {
     }, 1000);
   }, 10000);
 }
+
