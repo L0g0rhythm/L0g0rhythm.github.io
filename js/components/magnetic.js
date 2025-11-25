@@ -1,12 +1,5 @@
 /* ARQUIVO: js/components/magnetic.js */
 
-/**
- * @file magnetic.js
- * @description Magnetic UI effect for buttons.
- * REFACTOR: Optimized using RAF and Cached Rects to eliminate Layout Thrashing.
- * @version 2.0.0-60FPS
- */
-
 export function initMagneticEffect() {
   const magnets = document.querySelectorAll(
     ".dock-icon, .mobile-cta, .sound-control, .nav-links li"
@@ -51,4 +44,3 @@ export function initMagneticEffect() {
     });
   });
 }
-// enregion
