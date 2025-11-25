@@ -1,4 +1,5 @@
 /* ARQUIVO: js/components/visualizer.js */
+
 import { audioSystem } from "../core/audioSynth.js";
 
 export function initAudioVisualizer() {
@@ -58,3 +59,4 @@ export function initAudioVisualizer() {
 
   draw();
 }
+
