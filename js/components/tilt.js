@@ -1,4 +1,5 @@
 /* ARQUIVO: js/components/tilt.js */
+
 export function initTiltEffect() {
   const cards = document.querySelectorAll(
     ".service-card, .project-row, .about-container"
@@ -58,3 +59,4 @@ function applyTilt(card, mouseX, mouseY) {
 
   card.style.borderColor = "rgba(157, 78, 221, 0.5)";
 }
+
