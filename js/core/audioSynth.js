@@ -1,12 +1,5 @@
 /* ARQUIVO: js/core/audioSynth.js */
 
-/**
- * @file audioSynth.js
- * @description Real-time Audio Synthesizer.
- * REFACTOR: "Tactical Mode" - Balanced volume (Audible but polite).
- * @version 3.1.0-TACTICAL
- */
-
 let audioCtx = null;
 let analyser = null;
 
