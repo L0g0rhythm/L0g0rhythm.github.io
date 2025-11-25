@@ -1,12 +1,5 @@
 /* ARQUIVO: js/components/hackerText.js */
 
-/**
- * @file hackerText.js
- * @description Matrix-style text scrambling effect.
- * REFACTOR: Implemented IntersectionObserver for visibility-aware triggering.
- * @version 2.1.0-OBSERVER
- */
-
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
 
 export function initHackerEffect() {
@@ -87,5 +80,3 @@ function runEffect(el) {
     iterations += 1 / 3;
   }, 30);
 }
-
-// enregion
