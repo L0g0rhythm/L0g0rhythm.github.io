@@ -1,10 +1,5 @@
 /* FILE: js/components/contextMenu.js */
 
-/**
- * @file contextMenu.js
- * @description Custom Right-Click Menu. Secure DOM construction.
- */
-
 import { audioSystem } from "../core/audioSynth.js";
 import { dictionary } from "../core/dictionary.js";
 
@@ -144,3 +139,4 @@ export function initContextMenu() {
     }
   }
 }
+
