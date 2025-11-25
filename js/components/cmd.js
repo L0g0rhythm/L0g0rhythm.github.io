@@ -1,11 +1,5 @@
 /* FILE: js/components/cmd.js */
 
-/**
- * @file cmd.js
- * @description Command Palette.
- * REFACTOR: Removed dependency on global 'window.app'. Enforced Event Bus communication.
- */
-
 import { audioSystem } from "../core/audioSynth.js";
 import { dictionary } from "../core/dictionary.js";
 
@@ -293,4 +287,3 @@ export function initCommandPalette() {
     if (e.target === overlay) close();
   });
 }
-// enregion
