@@ -1,4 +1,5 @@
 /* ARQUIVO: js/core/audioManager.js */
+
 export const audioSystem = {
   sounds: {
     hover: new Audio("./assets/sounds/hover.mp3"),
@@ -26,3 +27,4 @@ export const audioSystem = {
     }
   },
 };
+
