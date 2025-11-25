@@ -1,12 +1,5 @@
 /* FILE: js/components/renderer.js */
 
-/**
- * @file renderer.js
- * @description Core rendering engine.
- * REFACTOR: Switched from innerHTML to DOM API for Zero Trust Security (XSS Mitigation) and improved performance.
- * @version 4.0.0-SECURE
- */
-
 const DOM_CONFIG = {
   IDS: {
     PROFILE_IMG: "profile-img",
@@ -453,5 +446,3 @@ window.initTypeWriter = function (text, element, speed) {
   }
   type();
 };
-
-// enregion
