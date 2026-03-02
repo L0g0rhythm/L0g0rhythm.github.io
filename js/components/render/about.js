@@ -1,11 +1,10 @@
 /* FILE: js/components/render/about.js */
 
 import { DOM_CONFIG } from "./renderConfig.js";
-import { createSocialLinksFragment } from "./socialLinks.js";
 
 /**
- * Renders the About section using secure DOM construction (no innerHTML).
- * Photo removed per architecture decision — layout is data-only.
+ * Renders the About section — compact single-viewport layout without
+ * photo or social dock (contacts are in the Hero section).
  */
 export function renderAboutSection(aboutData, profileData, socialsData) {
   const container = document.getElementById(DOM_CONFIG.IDS.ABOUT_CONTAINER);
@@ -13,7 +12,7 @@ export function renderAboutSection(aboutData, profileData, socialsData) {
 
   container.innerHTML = "";
 
-  // Data Column (full width — no photo column)
+  // Single column — no visual/photo column
   const dataCol = document.createElement("div");
   dataCol.className = DOM_CONFIG.CLASSES.ABOUT_DATA;
 
@@ -59,33 +58,13 @@ export function renderAboutSection(aboutData, profileData, socialsData) {
     specsGrid.appendChild(itemDiv);
   });
 
-  // Social Dock
-  const dockContainer = document.createElement("div");
-  dockContainer.className = DOM_CONFIG.CLASSES.SOCIAL_DOCK_CONTAINER;
-
-  const dockLabel = document.createElement("span");
-  dockLabel.className = DOM_CONFIG.CLASSES.SOCIAL_DOCK_LABEL;
-  dockLabel.textContent = "ESTABLISH CONNECTION";
-
-  const dock = document.createElement("div");
-  dock.className = DOM_CONFIG.CLASSES.SOCIAL_DOCK;
-  dock.id = DOM_CONFIG.IDS.SOCIAL_DOCK_TARGET;
-
-  dockContainer.append(dockLabel, dock);
-  dataCol.append(h2, bioP, specsTitle, specsGrid, dockContainer);
+  dataCol.append(h2, bioP, specsTitle, specsGrid);
   container.appendChild(dataCol);
 
-  // TypeWriter Effect
+  // TypeWriter Effect — instant on revisit
   if (window.initTypeWriter) {
     window.initTypeWriter(aboutData.main_text, bioP, 20);
   } else {
     bioP.textContent = aboutData.main_text;
-  }
-
-  // Social Icons
-  if (Array.isArray(socialsData)) {
-    dock.appendChild(
-      createSocialLinksFragment(socialsData, DOM_CONFIG.CLASSES.DOCK_ICON)
-    );
   }
 }
