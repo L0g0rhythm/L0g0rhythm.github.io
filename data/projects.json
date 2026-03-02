@@ -4,43 +4,141 @@
       "title": "Cryptoolsec",
       "repoUrl": "https://github.com/L0g0rhythm/Cryptoolsec",
       "description": "Engine de criptografia AES-256-GCM com suporte a streams e proteção de memória. Interface CLI e GUI focada em operações seguras.",
-      "tags": ["PYTHON", "CRYPTOGRAPHY", "ARGON2ID"]
+      "tags": [
+        "PYTHON",
+        "CRYPTOGRAPHY",
+        "ARGON2ID"
+      ]
     },
     {
       "title": "EITIN",
       "repoUrl": "https://github.com/L0g0rhythm/EITIN",
       "description": "Coletor de inteligência de sistema automatizado. Inventário profundo de hardware e software via PowerShell com privilégios elevados.",
-      "tags": ["POWERSHELL", "SYSADMIN", "AUDIT"]
+      "tags": [
+        "POWERSHELL",
+        "SYSADMIN",
+        "AUDIT"
+      ]
+    },
+    {
+      "title": "LogTool",
+      "repoUrl": "https://github.com/L0g0rhythm/LogTool",
+      "description": "Toolkit avançado em PowerShell para coleta e análise de logs de eventos do Windows com foco em auditoria de segurança.",
+      "tags": [
+        "AUDITING",
+        "SECURITY",
+        "POWERSHELL"
+      ]
+    },
+    {
+      "title": "URL-Refiner",
+      "repoUrl": "https://github.com/L0g0rhythm/URL-Refiner",
+      "description": "Processador de listas de URLs para deduplicação e refino, desenvolvido para profissionais de segurança e bug bounty.",
+      "tags": [
+        "SECURITY",
+        "AUTOMATION",
+        "PYTHON"
+      ]
+    },
+    {
+      "title": "Aegis-Scanner",
+      "repoUrl": "https://github.com/L0g0rhythm/Aegis-Scanner",
+      "description": "Scanner de infraestrutura de segurança modular, projetado sob os princípios de Clean Architecture e defesa ativa.",
+      "tags": [
+        "SECURITY",
+        "CLEAN-ARCH",
+        "PYTHON"
+      ]
     },
     {
       "title": "MDex",
       "repoUrl": "https://github.com/L0g0rhythm/MDex",
       "description": "Automação de coleta de dados via API MangaDex com conversão PDF on-the-fly. Arquitetura assíncrona para alta performance.",
-      "tags": ["PYTHON", "API REST", "AUTOMATION"]
+      "tags": [
+        "PYTHON",
+        "API REST",
+        "AUTOMATION"
+      ]
     },
     {
       "title": "Control Aegis",
       "repoUrl": "https://github.com/L0g0rhythm/Control-Aegis",
       "description": "Módulo de controle de perímetro para Windows. Gerenciamento de Firewall e Hosts via arquivo de configuração JSON centralizado.",
-      "tags": ["POWERSHELL", "FIREWALL", "SECURITY"]
+      "tags": [
+        "POWERSHELL",
+        "FIREWALL",
+        "SECURITY"
+      ]
+    },
+    {
+      "title": "FortiPass",
+      "repoUrl": "https://github.com/L0g0rhythm/FortiPass",
+      "description": "Gerenciador de senhas multi-conta focado em segurança ofensiva e criptografia robusta de credenciais.",
+      "tags": [
+        "SECURITY",
+        "ENCRYPTION",
+        "PYTHON"
+      ]
     },
     {
       "title": "WinNetDiag",
       "repoUrl": "https://github.com/L0g0rhythm/WinNetDiag",
       "description": "Ferramenta de diagnóstico e reparo de stack de rede. Executa resets progressivos e análise de conectividade para suporte Nível 2/3.",
-      "tags": ["NETWORKING", "TROUBLESHOOTING", "CLI"]
+      "tags": [
+        "NETWORKING",
+        "TROUBLESHOOTING",
+        "CLI"
+      ]
+    },
+    {
+      "title": "NetSecOptimizer",
+      "repoUrl": "https://github.com/L0g0rhythm/NetSecOptimizer",
+      "description": "Otimizador interativo de stack de rede para Windows e hardening de conexões para ambientes workstation.",
+      "tags": [
+        "NETWORKING",
+        "SECURITY",
+        "POWERSHELL"
+      ]
     },
     {
       "title": "WinOpt",
       "repoUrl": "https://github.com/L0g0rhythm/WinOpti",
       "description": "Script de otimização de kernel e limpeza de processos. Ajuste fino de telemetria e serviços para máxima performance (Low Latency).",
-      "tags": ["PERFORMANCE", "KERNEL", "GAMING"]
+      "tags": [
+        "PERFORMANCE",
+        "KERNEL",
+        "GAMING"
+      ]
+    },
+    {
+      "title": "InstaCleaner",
+      "repoUrl": "https://github.com/L0g0rhythm/InstaCleaner",
+      "description": "Utilitário de gerenciamento e saneamento de dados sociais desenvolvido com foco em arquitetura limpa e desacoplamento.",
+      "tags": [
+        "AUTOMATION",
+        "CLEAN-ARCH",
+        "PYTHON"
+      ]
     },
     {
       "title": "SysStorageCheck",
       "repoUrl": "https://github.com/L0g0rhythm/SysStorageCheck",
       "description": "Análise forense de armazenamento. Monitoramento de integridade (Hash), detecção de anomalias e relatórios de uso de disco.",
-      "tags": ["FORENSICS", "HASHING", "REPORTING"]
+      "tags": [
+        "FORENSICS",
+        "HASHING",
+        "REPORTING"
+      ]
+    },
+    {
+      "title": "Auto-Clicker",
+      "repoUrl": "https://github.com/L0g0rhythm/Auto-Clicker",
+      "description": "Script de automação de interface para tarefas repetitivas e otimização de fluxos de trabalho via AutoHotkey.",
+      "tags": [
+        "AUTOMATION",
+        "AHK",
+        "SCRIPTING"
+      ]
     }
   ],
   "en": [
@@ -48,43 +146,141 @@
       "title": "Cryptoolsec",
       "repoUrl": "https://github.com/L0g0rhythm/Cryptoolsec",
       "description": "AES-256-GCM encryption engine with stream support and memory protection. CLI and GUI interface focused on secure operations.",
-      "tags": ["PYTHON", "CRYPTOGRAPHY", "ARGON2ID"]
+      "tags": [
+        "PYTHON",
+        "CRYPTOGRAPHY",
+        "ARGON2ID"
+      ]
     },
     {
       "title": "EITIN",
       "repoUrl": "https://github.com/L0g0rhythm/EITIN",
       "description": "Automated system intelligence collector. Deep hardware and software inventory via PowerShell with elevated privileges.",
-      "tags": ["POWERSHELL", "SYSADMIN", "AUDIT"]
+      "tags": [
+        "POWERSHELL",
+        "SYSADMIN",
+        "AUDIT"
+      ]
+    },
+    {
+      "title": "LogTool",
+      "repoUrl": "https://github.com/L0g0rhythm/LogTool",
+      "description": "Advanced PowerShell toolkit for Windows Event Log collection and analysis with focus on security auditing.",
+      "tags": [
+        "AUDITING",
+        "SECURITY",
+        "POWERSHELL"
+      ]
+    },
+    {
+      "title": "URL-Refiner",
+      "repoUrl": "https://github.com/L0g0rhythm/URL-Refiner",
+      "description": "URL list processor for deduplication and refining, developed for security professionals and bug bounty hunters.",
+      "tags": [
+        "SECURITY",
+        "AUTOMATION",
+        "PYTHON"
+      ]
+    },
+    {
+      "title": "Aegis-Scanner",
+      "repoUrl": "https://github.com/L0g0rhythm/Aegis-Scanner",
+      "description": "Modular security infrastructure scanner, designed under Clean Architecture principles and active defense.",
+      "tags": [
+        "SECURITY",
+        "CLEAN-ARCH",
+        "PYTHON"
+      ]
     },
     {
       "title": "MDex",
       "repoUrl": "https://github.com/L0g0rhythm/MDex",
       "description": "Data collection automation via MangaDex API with on-the-fly PDF conversion. Asynchronous architecture for high performance.",
-      "tags": ["PYTHON", "API REST", "AUTOMATION"]
+      "tags": [
+        "PYTHON",
+        "API REST",
+        "AUTOMATION"
+      ]
     },
     {
       "title": "Control Aegis",
       "repoUrl": "https://github.com/L0g0rhythm/Control-Aegis",
       "description": "Windows perimeter control module. Firewall and Hosts management via a centralized JSON configuration file.",
-      "tags": ["POWERSHELL", "FIREWALL", "SECURITY"]
+      "tags": [
+        "POWERSHELL",
+        "FIREWALL",
+        "SECURITY"
+      ]
+    },
+    {
+      "title": "FortiPass",
+      "repoUrl": "https://github.com/L0g0rhythm/FortiPass",
+      "description": "Multi-account password manager focused on offensive security and robust credential encryption.",
+      "tags": [
+        "SECURITY",
+        "ENCRYPTION",
+        "PYTHON"
+      ]
     },
     {
       "title": "WinNetDiag",
       "repoUrl": "https://github.com/L0g0rhythm/WinNetDiag",
       "description": "Network stack diagnosis and repair tool. Performs progressive resets and connectivity analysis for Level 2/3 support.",
-      "tags": ["NETWORKING", "TROUBLESHOOTING", "CLI"]
+      "tags": [
+        "NETWORKING",
+        "TROUBLESHOOTING",
+        "CLI"
+      ]
+    },
+    {
+      "title": "NetSecOptimizer",
+      "repoUrl": "https://github.com/L0g0rhythm/NetSecOptimizer",
+      "description": "Interactive Windows network stack optimizer and connection hardening for workstation environments.",
+      "tags": [
+        "NETWORKING",
+        "SECURITY",
+        "POWERSHELL"
+      ]
     },
     {
       "title": "WinOpti",
       "repoUrl": "https://github.com/L0g0rhythm/WinOpti",
       "description": "Kernel optimization and process cleaning script. Fine-tuning of telemetry and services for maximum performance (Low Latency).",
-      "tags": ["PERFORMANCE", "KERNEL", "GAMING"]
+      "tags": [
+        "PERFORMANCE",
+        "KERNEL",
+        "GAMING"
+      ]
+    },
+    {
+      "title": "InstaCleaner",
+      "repoUrl": "https://github.com/L0g0rhythm/InstaCleaner",
+      "description": "Social media management and data sanitization utility developed with a focus on clean architecture and decoupling.",
+      "tags": [
+        "AUTOMATION",
+        "CLEAN-ARCH",
+        "PYTHON"
+      ]
     },
     {
       "title": "SysStorageCheck",
       "repoUrl": "https://github.com/L0g0rhythm/SysStorageCheck",
       "description": "Storage forensic analysis. Integrity monitoring (Hash), anomaly detection, and disk usage reporting.",
-      "tags": ["FORENSICS", "HASHING", "REPORTING"]
+      "tags": [
+        "FORENSICS",
+        "HASHING",
+        "REPORTING"
+      ]
+    },
+    {
+      "title": "Auto-Clicker",
+      "repoUrl": "https://github.com/L0g0rhythm/Auto-Clicker",
+      "description": "Interface automation script for repetitive tasks and workflow optimization via AutoHotkey.",
+      "tags": [
+        "AUTOMATION",
+        "AHK",
+        "SCRIPTING"
+      ]
     }
   ]
 }
