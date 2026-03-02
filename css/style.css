@@ -1,18 +1,22 @@
-/* ARQUIVO: css/style.css */
+/* FILE: css/style.css */
 
-/* 1. Núcleo */
+/* Legacy aggregator: CSS is now loaded via direct <link> tags in index.html
+   for parallel download (eliminates @import waterfall).
+   This file is kept for backward compatibility with any cached references. */
+
+/* 1. Core */
 @import url("base/variables.css");
 @import url("base/reset.css");
-@import url("base/base.css"); /* Polimento global (seleção, scroll) */
+@import url("base/base.css");
 @import url("base/typography.css");
 
 /* 2. Layout */
-@import url("layout/structure.css"); /* Engine do SPA (No Scroll) */
+@import url("layout/structure.css");
 @import url("layout/background.css");
 
-/* 3. Componentes */
+/* 3. Components */
 @import url("components/navbar.css");
-@import url("components/hero.css"); /* Glitch e Neon */
+@import url("components/hero.css");
 @import url("components/glass.css");
 @import url("components/about.css");
 @import url("components/cards.css");
@@ -21,6 +25,6 @@
 @import url("components/cmd.css");
 @import url("components/context-menu.css");
 
-/* 4. Extras */
+/* 4. Utilities */
 @import url("utilities/animations.css");
 @import url("responsive.css");

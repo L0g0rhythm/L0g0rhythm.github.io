@@ -1,8 +1,8 @@
-/* ARQUIVO: js/core/dictionary.js */
+/* FILE: js/core/dictionary.js */
 
 export const dictionary = {
   pt: {
-    // Navegação
+    // Navigation
     nav_start: "01. Início",
     nav_arch: "02. Arquiteto",
     nav_sol: "03. Soluções",
@@ -21,9 +21,9 @@ export const dictionary = {
     stat_offline: "OFFLINE",
 
     // Footer
-    footer_copy: "VICTOR OLIVEIRA © 2025",
+    footer_copy: "VICTOR OLIVEIRA © 2026",
 
-    // Logs do Sistema (Novos)
+    // System Logs
     sys_log_init: "SISTEMA INICIALIZADO",
     sys_log_ver: "L0G0RHYTHM OS V16.2 (SEGURO)",
     sys_log_enc: "CRIPTOGRAFIA: AES-256",
@@ -53,7 +53,7 @@ export const dictionary = {
     ctx_matrix: "Protocolo Matrix",
     ctx_cancel: "Cancelar",
 
-    // Notificações
+    // Notifications
     toast_lang: "SEQUÊNCIA DE IDIOMA: PT-BR",
     toast_matrix: "ACESSO CONCEDIDO: MODO MATRIX",
     toast_copy: "E-MAIL CRIPTOGRAFADO COPIADO",
@@ -83,9 +83,9 @@ export const dictionary = {
     stat_offline: "OFFLINE",
 
     // Footer
-    footer_copy: "VICTOR OLIVEIRA © 2025",
+    footer_copy: "VICTOR OLIVEIRA © 2026",
 
-    // System Logs (New)
+    // System Logs
     sys_log_init: "SYSTEM INITIALIZED",
     sys_log_ver: "L0G0RHYTHM OS V16.2 (SECURE)",
     sys_log_enc: "ENCRYPTION: AES-256",
@@ -125,4 +125,3 @@ export const dictionary = {
     toast_theme: "THEME APPLIED",
   },
 };
-

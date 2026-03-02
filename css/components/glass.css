@@ -1,15 +1,15 @@
-/* ARQUIVO: css/components/glass.css */
+/* FILE: css/components/glass.css */
 
 .glass-panel {
-  background: rgba(10, 10, 14, 0.6); /* Mais escuro para contraste */
+  background: rgba(10, 10, 14, 0.6); /* Darker for contrast */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 2px; /* Bordas mais retas = Mais técnico/F1 */
+  border-radius: 2px; /* Sharper edges = More technical/F1 */
 
-  /* TEXTURA DE REALISMO (Noise Overlay) */
-  /* Cria um padrão pontilhado sutil que simula granulação de filme/vidro real */
+  /* REALISM TEXTURE (Noise Overlay) */
+  /* Subtle dot pattern simulating film/glass grain */
   background-image: radial-gradient(
       rgba(255, 255, 255, 0.03) 1px,
       transparent 1px
@@ -19,7 +19,7 @@
   background-position: 0 0, 10px 10px;
 }
 
-/* Brilho sutil no topo para dar volume "Liquid" */
+/* Subtle top shine for Liquid volume effect */
 .glass-panel::before {
   content: "";
   position: absolute;

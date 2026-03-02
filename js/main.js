@@ -62,13 +62,11 @@ class AppController {
   }
 
   async init() {
-    //.log(":: SYSTEM INITIALIZATION :: Phase 10 (Feature Complete)");
-
     window.showToast = (msg) => this.showSystemToast(msg);
 
     this.initPageTitles();
     this.bindEvents();
-    this.initWindowEvents(); // Monitoramento de Aba (Signal Lost)
+    this.initWindowEvents();
     this.restoreTheme();
     this.updateLangUI(this.currentLang);
     this.translateStaticUI(this.currentLang);
@@ -169,7 +167,7 @@ class AppController {
     });
   }
 
-  // --- FEATURE RESTAURADA: COMPORTAMENTO DE ABA ---
+  // Tab visibility: title change for re-engagement
   initWindowEvents() {
     const originalTitle = document.title;
     const altTitle = "⚠️ SIGNAL LOST // RECONNECT...";
@@ -178,7 +176,6 @@ class AppController {
       if (document.hidden) {
         document.title = altTitle;
       } else {
-        // Restaura o título correto baseado na seção atual
         document.title = this.pageTitles[this.currentView] || originalTitle;
       }
     });
@@ -194,9 +191,6 @@ class AppController {
         if (audioSystem.enabled) audioSystem.playHover();
       });
     });
-    //console.log(
-    //  `[Audio] Feedback system engaged for ${elements.length} elements.`
-    //);
   }
 
   showSystemToast(msg) {
@@ -378,7 +372,7 @@ class AppController {
       dict.sys_log_ver || "L0G0RHYTHM OS V16.2",
       dict.sys_log_enc || "ENCRYPTION: AES-256",
       dict.sys_log_opt || "STATUS: OPTIMAL",
-      "VICTOR OLIVEIRA © 2025",
+      "VICTOR OLIVEIRA © 2026",
     ];
     let mIdx = 0;
     if (this.intervals.log) clearInterval(this.intervals.log);
@@ -560,10 +554,6 @@ class AppController {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  //console.log(
-  //"%c L0G0RHYTHM // SYSTEM OPTIMAL ",
-  //   "background:#000; color:#00ff41; padding:5px; font-family:monospace;"
-  //);
   const app = new AppController();
   try {
     const userLang =

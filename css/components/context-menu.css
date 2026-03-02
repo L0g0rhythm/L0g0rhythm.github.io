@@ -1,4 +1,4 @@
-/* ARQUIVO: css/components/context-menu.css */
+/* FILE: css/components/context-menu.css */
 .ctx-menu {
   position: fixed;
   z-index: 999999;
@@ -41,7 +41,7 @@
 .ctx-list li:hover {
   background: rgba(157, 78, 221, 0.1);
   color: var(--text-main);
-  padding-left: 25px; /* Efeito de deslize */
+  padding-left: 25px; /* Slide effect */
 }
 
 .ctx-list li i {

@@ -1,4 +1,4 @@
-/* ARQUIVO: js/core/dataLoader.js */
+/* FILE: js/core/dataLoader.js */
 
 export async function loadAllData(lang = "pt") {
   const resources = [
@@ -7,12 +7,12 @@ export async function loadAllData(lang = "pt") {
     "projects",
     "services",
     "socials",
-    "tools", // Incluído para garantir carregamento completo
+    "tools",
   ];
 
   const data = {};
 
-  // Cria promessas individuais com tratamento de erro isolado
+  // Isolated error handling per resource prevents cascade failures
   const promises = resources.map(async (res) => {
     try {
       const response = await fetch(`./data/${res}.json`);
@@ -20,23 +20,22 @@ export async function loadAllData(lang = "pt") {
       return { key: res, value: await response.json(), status: "success" };
     } catch (e) {
       console.warn(`[System] Failed to load module: ${res}`, e);
-      return { key: res, value: null, status: "error" }; // Não quebra o fluxo
+      return { key: res, value: null, status: "error" };
     }
   });
 
-  // Aguarda todas, independentemente de sucesso ou falha
   const results = await Promise.all(promises);
 
   results.forEach(({ key, value, status }) => {
     if (status === "success" && value) {
-      // Lógica de Seleção de Idioma
+      // Language selection: use locale branch if available, else universal data
       if (value[lang]) {
         data[key] = value[lang];
       } else {
-        data[key] = value; // Dados universais (ex: socials)
+        data[key] = value;
       }
     } else {
-      // Fallback seguro para evitar undefined no renderer
+      // Safe fallback to prevent undefined in renderer
       data[key] = null;
     }
   });

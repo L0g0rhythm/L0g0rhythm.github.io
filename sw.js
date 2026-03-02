@@ -1,26 +1,25 @@
 /* FILE: sw.js */
-const CACHE_NAME = "l0g0rhythm-sys-v16-platinum-stable";
+const CACHE_NAME = "l0g0rhythm-sys-v17-apex";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
   "./404.html",
   "./manifest.json",
-  "./css/style.css",
-  "./css/base/base.css",
-  "./css/base/reset.css",
-  "./css/base/typography.css",
   "./css/base/variables.css",
+  "./css/base/reset.css",
+  "./css/base/base.css",
+  "./css/base/typography.css",
+  "./css/layout/structure.css",
+  "./css/layout/background.css",
+  "./css/components/navbar.css",
+  "./css/components/hero.css",
+  "./css/components/glass.css",
   "./css/components/about.css",
   "./css/components/cards.css",
+  "./css/components/footer.css",
+  "./css/components/loader.css",
   "./css/components/cmd.css",
   "./css/components/context-menu.css",
-  "./css/components/footer.css",
-  "./css/components/glass.css",
-  "./css/components/hero.css",
-  "./css/components/loader.css",
-  "./css/components/navbar.css",
-  "./css/layout/background.css",
-  "./css/layout/structure.css",
   "./css/utilities/animations.css",
   "./css/responsive.css",
   "./js/main.js",
@@ -40,6 +39,7 @@ const ASSETS_TO_CACHE = [
   "./data/projects.json",
   "./data/services.json",
   "./data/socials.json",
+  "./data/tools.json",
   "./images/profile.webp",
   "./images/favicon.ico",
   "./images/favicon-32x32.png",
@@ -73,7 +73,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
 
-  // JSON Data: Sempre tenta pegar fresco da rede
+  // JSON data: always attempt fresh network fetch first
   if (url.pathname.endsWith(".json")) {
     event.respondWith(
       fetch(event.request)
@@ -89,7 +89,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Estratégia Network First (Mais segura e estável)
+  // Network First strategy for all other assets
   event.respondWith(
     fetch(event.request)
       .then((networkResponse) => {
@@ -99,6 +99,6 @@ self.addEventListener("fetch", (event) => {
           .then((cache) => cache.put(event.request, clone));
         return networkResponse;
       })
-      .catch(() => caches.match(event.request)) // Fallback para cache se offline
+      .catch(() => caches.match(event.request))
   );
 });

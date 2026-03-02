@@ -12,23 +12,27 @@ export function initParticles() {
   document.body.appendChild(canvas);
 
   const ctx = canvas.getContext("2d");
-  let width = (canvas.width = window.innerWidth);
-  let height = (canvas.height = window.innerHeight);
+  const dpr = window.devicePixelRatio || 1;
 
-  // Optimized Storage (TypedArray is overkill here, standard array is fine for <100 particles)
+  let width, height;
+
+  function resizeCanvas() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.scale(dpr, dpr);
+  }
+
+  resizeCanvas();
+
   const particles = [];
 
-  // Throttling State
   let lastMouseMoveTime = 0;
-  const PARTICLE_THROTTLE_MS = 50; // Max creation 20 times per second
+  const PARTICLE_THROTTLE_MS = 50;
 
-  // Resize Handler
-  window.addEventListener("resize", () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
+  window.addEventListener("resize", resizeCanvas);
 
-  // Mouse Handler with Throttle
   document.addEventListener("mousemove", (e) => {
     const now = Date.now();
     if (now - lastMouseMoveTime > PARTICLE_THROTTLE_MS) {
@@ -38,7 +42,6 @@ export function initParticles() {
   });
 
   function createParticles(x, y) {
-    // Reduced count per emission for cleaner look
     for (let i = 0; i < 2; i++) {
       particles.push({
         x: x,
@@ -55,13 +58,15 @@ export function initParticles() {
   function animate() {
     ctx.clearRect(0, 0, width, height);
 
-    // Backward loop allows safe removal during iteration
-    for (let i = particles.length - 1; i >= 0; i--) {
+    // Swap-and-pop removal: O(1) per element instead of O(n) splice
+    let len = particles.length;
+    for (let i = len - 1; i >= 0; i--) {
       const p = particles[i];
 
-      // Optimization: Skip rendering invisible particles
       if (p.life <= 0.01) {
-        particles.splice(i, 1);
+        particles[i] = particles[len - 1];
+        particles.pop();
+        len--;
         continue;
       }
 
@@ -72,8 +77,8 @@ export function initParticles() {
 
       p.x += p.speedX;
       p.y += p.speedY;
-      p.life -= 0.02; // Decay rate
-      p.size *= 0.95; // Shrink
+      p.life -= 0.02;
+      p.size *= 0.95;
     }
 
     requestAnimationFrame(animate);

@@ -399,25 +399,7 @@ function renderFooterSocials(socials) {
   });
 }
 
-/**
- * Utility: Escapes text (Legacy/Fallback).
- * Note: Since we switched to textContent, this is strictly a utility for edge cases.
- */
-function escapeText(str) {
-  if (!str) return "";
-  return str.replace(
-    /[&<>"']/g,
-    (m) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[
-        m
-      ])
-  );
-}
 
-// Placeholder for future implementation
-export function renderTabContent(tabId, allData) {
-  // Logic not yet implemented or not required by current specs.
-}
 
 /**
  * Global TypeWriter effect attached to window for accessibility from other modules.

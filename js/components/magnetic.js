@@ -1,4 +1,4 @@
-/* ARQUIVO: js/components/magnetic.js */
+/* FILE: js/components/magnetic.js */
 
 export function initMagneticEffect() {
   const magnets = document.querySelectorAll(
@@ -9,7 +9,7 @@ export function initMagneticEffect() {
     let rect = null;
     let isHovering = false;
 
-    // 1. Pre-calculate geometry ONLY on entry (Performance Win)
+    // Pre-calculate geometry only on entry (avoids per-frame layout thrash)
     magnet.addEventListener("mouseenter", () => {
       rect = magnet.getBoundingClientRect();
       isHovering = true;
@@ -18,11 +18,10 @@ export function initMagneticEffect() {
     magnet.addEventListener("mousemove", (e) => {
       if (!isHovering || !rect) return;
 
-      // 2. Physics Logic (Lightweight)
       const x = e.clientX - (rect.left + rect.width / 2);
       const y = e.clientY - (rect.top + rect.height / 2);
 
-      // 3. Render via RAF (VSync Aligned)
+      // VSync-aligned render via requestAnimationFrame
       requestAnimationFrame(() => {
         magnet.style.transform = `translate(${x / 3}px, ${y / 3}px)`;
         magnet.style.transition = "transform 0.1s ease-out";
@@ -38,7 +37,7 @@ export function initMagneticEffect() {
       });
     });
 
-    // Resize Observer to invalidate cache if layout changes
+    // Invalidate cached geometry on layout change
     window.addEventListener("resize", () => {
       rect = null;
     });

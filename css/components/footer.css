@@ -1,4 +1,4 @@
-/* ARQUIVO: css/components/footer.css */
+/* FILE: css/components/footer.css */
 .system-status-bar {
   position: fixed;
   bottom: 0;
@@ -22,7 +22,7 @@
   max-width: 1400px;
 }
 
-/* Esquerda: LOG */
+/* Left: LOG */
 .system-log {
   font-family: var(--font-tech);
   font-size: 0.7rem;
@@ -44,7 +44,7 @@
   animation: pulse-log 2s infinite;
 }
 
-/* Direita: TRAY */
+/* Right: TRAY */
 .system-tray {
   display: flex;
   align-items: center;
@@ -102,5 +102,5 @@
   }
   .system-log {
     display: none;
-  } /* Esconde log no mobile para caber */
+  } /* Hide log on mobile to fit */
 }

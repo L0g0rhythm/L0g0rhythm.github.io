@@ -1,6 +1,6 @@
-/* ARQUIVO: css/components/cards.css */
+/* FILE: css/components/cards.css */
 
-/* --- SERVIÇOS (HOLOGRAPHIC MODE) --- */
+/* --- SERVICES (HOLOGRAPHIC MODE) --- */
 .service-card {
   padding: 30px;
   border: 1px solid var(--glass-border);
@@ -17,7 +17,7 @@
   gap: 20px;
 }
 
-/* Efeito de Foco/Elevação */
+/* Focus/Elevation Effect */
 .service-card:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: var(--accent-primary);
@@ -26,7 +26,7 @@
   z-index: 2;
 }
 
-/* O Ícone (A Alma do Card) */
+/* Icon (Card Identity) */
 .service-icon-wrapper {
   font-size: 2rem;
   color: var(--text-muted);
@@ -41,7 +41,7 @@
   animation: icon-pulse 2s infinite;
 }
 
-/* Header e Texto */
+/* Header and Text */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -61,7 +61,7 @@
 .status-dot {
   width: 6px;
   height: 6px;
-  background-color: #00ff41; /* Verde = Online/Operacional */
+  background-color: #00ff41; /* Green = Online/Operational */
   box-shadow: 0 0 8px #00ff41;
   border-radius: 50%;
 }
@@ -73,7 +73,7 @@
   line-height: 1.7;
 }
 
-/* Detalhe Técnico (Canto Decorativo) */
+/* Technical Detail (Decorative Corner) */
 .corner-bracket {
   position: absolute;
   top: 0;
@@ -89,7 +89,7 @@
   border-top-color: var(--accent-primary);
   border-right-color: var(--accent-primary);
   width: 40px;
-  height: 40px; /* Cresce no hover */
+  height: 40px; /* Grows on hover */
 }
 
 @keyframes icon-pulse {
@@ -105,7 +105,7 @@
   }
 }
 
-/* --- PROJETOS --- */
+/* --- PROJECTS --- */
 .project-row {
   display: grid;
   grid-template-columns: 1fr;
@@ -164,7 +164,7 @@
   border-radius: 2px;
 }
 
-/* --- LINK DE ACESSO (REFINADO) --- */
+/* --- ACCESS LINK (REFINED) --- */
 .project-link {
   /* 1. TROCA DE FONTE: Usar a técnica para nitidez */
   font-family: var(--font-tech);
@@ -216,7 +216,7 @@
   color: var(--accent-primary);
 }
 
-/* --- ESTADO HOVER --- */
+/* --- HOVER STATE --- */
 .project-link:hover {
   color: var(--accent-primary) !important;
   text-shadow: 0 0 10px rgba(157, 78, 221, 0.6); /* Brilho contido */

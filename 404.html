@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0"
     />
     <title>404 | SIGNAL LOST</title>
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com http://me.kis.v2.scr.kaspersky-labs.com ws://me.kis.v2.scr.kaspersky-labs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self' ws://me.kis.v2.scr.kaspersky-labs.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self';">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,22 +44,20 @@
       import { audioSystem } from "./js/core/audioSynth.js";
 
       document.addEventListener("DOMContentLoaded", () => {
-        // 1. Restauração de Tema (Visual Consistency)
+        // 1. Theme Restoration (Visual Consistency)
         const savedTheme = localStorage.getItem("userTheme");
         if (savedTheme) {
           document.documentElement.style.setProperty("--accent-primary", savedTheme);
         }
 
-        // 2. Inicialização do Subsistema de Áudio
-        // O áudio precisa de uma interação para destravar
+        // 2. Audio Subsystem Initialization
+        // Audio requires user interaction to unlock
         const unlockAudio = () => {
           if (audioSystem.analyser?.context.state === "suspended") {
              audioSystem.analyser.context.resume();
           }
-          // Inicializa o contexto se ainda não existir
           audioSystem.initContext();
-          
-          // Remove os listeners após a primeira interação
+
           document.removeEventListener("click", unlockAudio);
           document.removeEventListener("keydown", unlockAudio);
         };
@@ -67,19 +65,19 @@
         document.addEventListener("click", unlockAudio);
         document.addEventListener("keydown", unlockAudio);
 
-        // 3. Bind de Áudio no Botão de Retorno
+        // 3. Audio Bind on Return Button
         const btn = document.getElementById("return-btn");
         if (btn) {
           btn.addEventListener("mouseenter", () => {
             if (audioSystem.enabled) audioSystem.playHover();
           });
-          
+
           btn.addEventListener("click", (e) => {
             if (audioSystem.enabled) audioSystem.playClick();
-            // O link funcionará normalmente após o clique
           });
         }
       });
     </script>
   </body>
 </html>
+

@@ -1,4 +1,4 @@
-/* ARQUIVO: css/components/cmd.css */
+/* FILE: css/components/cmd.css */
 
 .cmd-overlay {
   position: fixed;
@@ -9,11 +9,11 @@
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
   z-index: 10000;
-  /* CORREÇÃO: Usar flex para centralizar melhor e dar margem segura */
+  /* FIX: Usar flex para centralizar melhor e dar margem segura */
   display: flex;
-  align-items: flex-start; /* Começa do topo */
+  align-items: flex-start; /* Start from top */
   justify-content: center;
-  padding: 60px 20px; /* Espaço nas laterais e topo para não grudar */
+  padding: 60px 20px; /* Safe margin from edges */
   opacity: 0;
   pointer-events: none;
   transition: 0.2s ease;
@@ -31,11 +31,11 @@
   border: 1px solid var(--glass-border);
   border-radius: 6px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  /* CORREÇÃO: Forçar layout flex vertical e limitar altura */
+  /* FIX: Force vertical flex layout with height limit */
   display: flex;
   flex-direction: column;
-  max-height: 70vh; /* Nunca será maior que 70% da altura da tela */
-  overflow: hidden; /* Garante que nada vaze das bordas arredondadas */
+  max-height: 70vh; /* Never taller than 70% viewport height */
+  overflow: hidden; /* Prevents overflow past rounded borders */
   transform: translateY(-20px);
   transition: 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -49,7 +49,7 @@
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid var(--glass-border);
-  flex-shrink: 0; /* Garante que o input nunca encolha */
+  flex-shrink: 0; /* Ensures input never shrinks */
 }
 
 .cmd-input-wrapper i {
@@ -70,11 +70,11 @@
 
 .cmd-list {
   list-style: none;
-  /* CORREÇÃO: Removemos max-height fixo e usamos flex para ocupar o espaço restante */
+  /* FIX: Uses flex to fill remaining space instead of fixed max-height */
   flex: 1;
   overflow-y: auto; /* Scroll apenas aqui dentro se necessário */
   padding: 10px;
-  /* Adiciona um padding extra no final para o último item não ficar colado na borda */
+  /* Extra padding at bottom so last item is not flush with edge */
   padding-bottom: 15px;
 }
 
@@ -90,7 +90,7 @@
   transition: 0.1s;
   font-family: var(--font-tech);
   font-size: 0.9rem;
-  border-left: 3px solid transparent; /* Prepara a borda para o hover */
+  border-left: 3px solid transparent; /* Prepares border for hover */
 }
 
 .cmd-item:hover,
@@ -107,7 +107,7 @@
   border-radius: 3px;
 }
 
-/* Scrollbar customizada para o menu */
+/* Custom scrollbar for menu */
 .cmd-list::-webkit-scrollbar {
   width: 4px;
 }

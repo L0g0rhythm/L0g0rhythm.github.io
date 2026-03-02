@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0"
     />
     <title>L0g0rhythm | Architect</title>
 
@@ -15,7 +15,7 @@
     <meta property="og:title" content="L0G0RHYTHM // SYSTEM OVERRIDE" />
     <meta
       property="og:description"
-      content="Construindo a infraestrutura do futuro com precisão cirúrgica."
+      content="Building future infrastructure with surgical precision and absolute security."
     />
     <meta property="og:image" content="./images/profile.webp" />
     <meta property="og:url" content="https://l0g0rhythm.com.br/" />
@@ -23,7 +23,7 @@
 
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com http://me.kis.v2.scr.kaspersky-labs.com ws://me.kis.v2.scr.kaspersky-labs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self' ws://me.kis.v2.scr.kaspersky-labs.com;"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self';"
     />
 
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -45,17 +45,44 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&family=Syncopate:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Font Awesome: async load to avoid render-blocking -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      />
+    </noscript>
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- CSS: direct links eliminate @import waterfall -->
+    <link rel="stylesheet" href="./css/base/variables.css" />
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/base/base.css" />
+    <link rel="stylesheet" href="./css/base/typography.css" />
+    <link rel="stylesheet" href="./css/layout/structure.css" />
+    <link rel="stylesheet" href="./css/layout/background.css" />
+    <link rel="stylesheet" href="./css/components/navbar.css" />
+    <link rel="stylesheet" href="./css/components/hero.css" />
+    <link rel="stylesheet" href="./css/components/glass.css" />
+    <link rel="stylesheet" href="./css/components/about.css" />
+    <link rel="stylesheet" href="./css/components/cards.css" />
+    <link rel="stylesheet" href="./css/components/footer.css" />
+    <link rel="stylesheet" href="./css/components/loader.css" />
+    <link rel="stylesheet" href="./css/components/cmd.css" />
+    <link rel="stylesheet" href="./css/components/context-menu.css" />
+    <link rel="stylesheet" href="./css/utilities/animations.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
 
     <script type="application/ld+json">
       {

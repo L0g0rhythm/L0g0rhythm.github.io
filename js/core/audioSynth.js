@@ -1,4 +1,4 @@
-/* ARQUIVO: js/core/audioSynth.js */
+/* FILE: js/core/audioSynth.js */
 
 let audioCtx = null;
 let analyser = null;
@@ -16,13 +16,11 @@ export const audioSystem = {
       analyser.fftSize = 64;
 
       const masterGain = audioCtx.createGain();
-      masterGain.gain.value = 0.8; // Master boost
+      masterGain.gain.value = 0.8;
       masterGain.connect(audioCtx.destination);
 
       analyser.connect(masterGain);
       this.analyser = analyser;
-
-      //console.log(":: AUDIO SYNTH :: Context Created (Tactical Mode)");
     }
 
     if (audioCtx.state === "suspended") {
@@ -33,15 +31,14 @@ export const audioSystem = {
   playHover() {
     if (!this.enabled) return;
     this.initContext();
-    // Volume ajustado: 0.01 -> 0.05 (Audível, mas sutil)
-    // Frequência: Um pouco mais "brilhante" (400->600Hz) para clareza
+    // Subtle but audible sweep (400→600Hz sine)
     this.createTone(400, 600, "sine", 0.05, 0.08);
   },
 
   playClick() {
     if (!this.enabled) return;
     this.initContext();
-    // Volume ajustado: 0.03 -> 0.1 (Feedback tátil claro)
+    // Clear tactile feedback (300→100Hz sine)
     this.createTone(300, 100, "sine", 0.1, 0.15);
   },
 

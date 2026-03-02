@@ -1,4 +1,4 @@
-/* ARQUIVO: js/components/hackerText.js */
+/* FILE: js/components/hackerText.js */
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
 
@@ -7,38 +7,33 @@ export function initHackerEffect() {
     ".nav-links li, .mobile-links a, .about-data h2, .section-header h2, .hero-title"
   );
 
-  // 1. Observer: Dispara o efeito apenas quando o elemento entra na tela
+  // Observer: triggers effect only when element enters viewport
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const el = entry.target;
-          // Reinicia o efeito sempre que aparecer (comportamento "vivo")
-          // Se quiser que rode apenas uma vez, descomente a linha abaixo:
-          // observer.unobserve(el);
           runEffect(el);
         }
       });
     },
-    { threshold: 0.5 } // Dispara quando 50% do elemento estiver visível
+    { threshold: 0.5 }
   );
 
   targets.forEach((element) => {
-    // Evita múltiplos bindings (Memory Leak Prevention)
+    // Prevent multiple bindings (memory leak prevention)
     if (element.dataset.hackerBound === "true") return;
     element.dataset.hackerBound = "true";
 
-    // Cache do estado original (Defense in Depth contra perda de dados)
+    // Cache original state (defense in depth against data loss)
     if (!element.dataset.originalHtml) {
       element.dataset.originalHtml = element.innerHTML;
-      element.dataset.originalText = element.innerText; // Cache puro do texto
+      element.dataset.originalText = element.innerText;
     }
 
-    // Interatividade: Mouseover
     element.addEventListener("mouseover", () => runEffect(element));
 
-    // Auto-run: Delega para o Observer em vez de rodar cego
-    // Aplica-se a H2 (títulos de seção) e ao Título Hero
+    // Auto-run via observer for section headers and hero title
     if (element.tagName === "H2" || element.classList.contains("hero-title")) {
       observer.observe(element);
     }
@@ -46,13 +41,13 @@ export function initHackerEffect() {
 }
 
 /**
- * Core logic for the scramble effect.
- * Optimized to use Cached Text and prevent interval collision.
+ * Core scramble effect logic.
+ * Uses cached text and prevents interval collision.
  */
 function runEffect(el) {
   const originalText = el.dataset.originalText || el.innerText;
 
-  // Limpa animação anterior se houver (Thread Safety)
+  // Clear previous animation if running (thread safety)
   if (el.interval) clearInterval(el.interval);
 
   let iterations = 0;
@@ -70,13 +65,13 @@ function runEffect(el) {
 
     if (iterations >= originalText.length) {
       clearInterval(el.interval);
-      // Restaura o HTML original para recuperar cores/spans (ex: <span class="accent">)
+      // Restore original HTML to recover styled spans (e.g. <span class="accent">)
       if (el.dataset.originalHtml) {
         el.innerHTML = el.dataset.originalHtml;
       }
     }
 
-    // Aceleração não-linear para sensação orgânica
+    // Non-linear acceleration for organic feel
     iterations += 1 / 3;
   }, 30);
 }
