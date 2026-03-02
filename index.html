@@ -51,7 +51,7 @@
       rel="stylesheet"
     />
 
-    <!-- Critical above-the-fold CSS loaded synchronously -->
+    <!-- All CSS loaded synchronously (CSP blocks inline onload handlers) -->
     <link rel="stylesheet" href="./css/base/variables.css" />
     <link rel="stylesheet" href="./css/base/reset.css" />
     <link rel="stylesheet" href="./css/base/base.css" />
@@ -62,15 +62,13 @@
     <link rel="stylesheet" href="./css/components/hero.css" />
     <link rel="stylesheet" href="./css/components/loader.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
-
-    <!-- Deferred CSS: loaded async, applied after page renders -->
-    <link rel="stylesheet" href="./css/components/glass.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/components/about.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/components/cards.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/components/cmd.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/components/context-menu.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/utilities/animations.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/responsive.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/components/glass.css" />
+    <link rel="stylesheet" href="./css/components/about.css" />
+    <link rel="stylesheet" href="./css/components/cards.css" />
+    <link rel="stylesheet" href="./css/components/cmd.css" />
+    <link rel="stylesheet" href="./css/components/context-menu.css" />
+    <link rel="stylesheet" href="./css/utilities/animations.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
 
     <!-- Font Awesome: only solid + brands subsets -->
     <link
