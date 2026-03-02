@@ -1,7 +1,6 @@
 /* FILE: js/core/navigation.js */
 
 import { APP_CONFIG } from "./appConfig.js";
-import { audioSystem } from "./audioSynth.js";
 
 let currentView = "hero";
 let mobileMenuOpen = false;
@@ -115,7 +114,6 @@ export function bindNavEvents() {
           const lang = localStorage.getItem("userLang") || "pt";
           const dict = dictionary[lang] || dictionary["pt"];
           showSystemToast(dict.toast_copy || "EMAIL ID COPIED");
-          if (audioSystem.enabled) audioSystem.playClick();
         })
         .catch(console.error);
     }

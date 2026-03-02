@@ -1,22 +1,23 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Victor Oliveira",
+  "name": "Vernier",
   "alternateName": "L0g0rhythm",
   "url": "https://l0g0rhythm.com.br",
-  "image": "https://l0g0rhythm.com.br/images/profile.webp",
-  "jobTitle": "Cybersecurity Architect & Systems Engineer",
-  "description": "High-Performance Systems Architect specialized in Cyber Warfare, Automation, and Secure Infrastructure.",
+  "jobTitle": "Security Architect & Systems Engineer",
+  "description": "Security Architect focused on autonomous defense and detection. Building systems, websites, and tools at the intersection of Cybersecurity, AI, Automation, and Governance.",
   "knowsAbout": [
     "Cybersecurity",
-    "Rust",
+    "Defensive Security",
     "Python",
     "System Architecture",
-    "AI"
+    "AI",
+    "Web Development",
+    "Automation"
   ],
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Recife",
+    "addressLocality": "Sao Paulo",
     "addressCountry": "BR"
   },
   "sameAs": [

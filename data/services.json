@@ -1,66 +1,66 @@
 {
   "pt": [
     {
-      "title": "SYSTEM ARCHITECTURE",
-      "description": "Design de ecossistemas digitais escaláveis. Desenvolvimento de aplicações web de alta performance com foco em estabilidade e segurança desde o código-fonte.",
-      "iconClass": "fas fa-sitemap"
+      "title": "WEB & SYSTEMS",
+      "description": "Arquitetura e desenvolvimento de sites, aplicações web e sistemas de alta performance. Design escalável com foco em estabilidade e segurança desde o código-fonte.",
+      "iconClass": "fas fa-code"
     },
     {
-      "title": "INFRA HARDENING",
-      "description": "Blindagem completa de infraestrutura. Auditoria de vulnerabilidades, implementação de Zero Trust e protocolos de defesa ativa para servidores e endpoints.",
+      "title": "DEFENSIVE SECURITY",
+      "description": "Arquitetura de segurança defensiva. Hardening de infraestrutura, implementação de Zero Trust, detecção autônoma e protocolos de defesa para servidores e endpoints.",
       "iconClass": "fas fa-shield-alt"
     },
     {
-      "title": "THREAT INTELLIGENCE",
-      "description": "Operações de Blue Team. Monitoramento contínuo, análise de vetores de ataque e estratégias de mitigação baseadas em dados reais de ameaças globais.",
-      "iconClass": "fas fa-eye"
-    },
-    {
-      "title": "PROCESS AUTOMATION",
-      "description": "Engenharia de eficiência. Scripts personalizados (Python/PowerShell) para eliminar gargalos operacionais e automatizar fluxos de trabalho complexos.",
+      "title": "AUTOMATION & TOOLING",
+      "description": "Engenharia de ferramentas e automação. Scripts e pipelines personalizados (Python/PowerShell) para eliminar gargalos operacionais e orquestrar fluxos complexos.",
       "iconClass": "fas fa-robot"
     },
     {
-      "title": "PERFORMANCE TUNING",
-      "description": "Otimização cirúrgica de sistemas. Ajustes de kernel, limpeza de processos e overclocking seguro para extrair o máximo de hardware workstation ou gaming.",
-      "iconClass": "fas fa-tachometer-alt"
+      "title": "AI & DETECTION",
+      "description": "Integração de inteligência artificial para detecção de anomalias, análise comportamental e resposta automatizada a incidentes em tempo real.",
+      "iconClass": "fas fa-brain"
     },
     {
-      "title": "DIGITAL STEALTH",
-      "description": "Consultoria de privacidade ofensiva. Proteção de identidade digital, criptografia de dados sensíveis e contra-medidas de engenharia social.",
-      "iconClass": "fas fa-user-secret"
+      "title": "GOVERNANCE & COMPLIANCE",
+      "description": "Governança de segurança e conformidade regulatória. Frameworks LGPD/GDPR, políticas de acesso, auditoria contínua e gestão de riscos.",
+      "iconClass": "fas fa-balance-scale"
+    },
+    {
+      "title": "PERFORMANCE ENGINEERING",
+      "description": "Otimização cirúrgica de performance. Tuning de sistemas, análise de bottlenecks e engenharia de recursos para máxima eficiência operacional.",
+      "iconClass": "fas fa-tachometer-alt"
     }
   ],
   "en": [
     {
-      "title": "SYSTEM ARCHITECTURE",
-      "description": "Design of scalable digital ecosystems. Development of high-performance web applications focused on stability and security from the source code up.",
-      "iconClass": "fas fa-sitemap"
+      "title": "WEB & SYSTEMS",
+      "description": "Architecture and development of websites, web applications, and high-performance systems. Scalable design focused on stability and security from the source code up.",
+      "iconClass": "fas fa-code"
     },
     {
-      "title": "INFRA HARDENING",
-      "description": "Complete infrastructure shielding. Vulnerability auditing, Zero Trust implementation, and active defense protocols for servers and endpoints.",
+      "title": "DEFENSIVE SECURITY",
+      "description": "Defensive security architecture. Infrastructure hardening, Zero Trust implementation, autonomous detection, and defense protocols for servers and endpoints.",
       "iconClass": "fas fa-shield-alt"
     },
     {
-      "title": "THREAT INTELLIGENCE",
-      "description": "Blue Team operations. Continuous monitoring, attack vector analysis, and mitigation strategies based on real-time global threat data.",
-      "iconClass": "fas fa-eye"
-    },
-    {
-      "title": "PROCESS AUTOMATION",
-      "description": "Efficiency engineering. Custom scripts (Python/PowerShell) to eliminate operational bottlenecks and automate complex workflows.",
+      "title": "AUTOMATION & TOOLING",
+      "description": "Tool engineering and automation. Custom scripts and pipelines (Python/PowerShell) to eliminate operational bottlenecks and orchestrate complex workflows.",
       "iconClass": "fas fa-robot"
     },
     {
-      "title": "PERFORMANCE TUNING",
-      "description": "Surgical system optimization. Kernel tweaking, process cleaning, and safe overclocking to extract maximum hardware performance (Workstation/Gaming).",
-      "iconClass": "fas fa-tachometer-alt"
+      "title": "AI & DETECTION",
+      "description": "Artificial intelligence integration for anomaly detection, behavioral analysis, and automated real-time incident response.",
+      "iconClass": "fas fa-brain"
     },
     {
-      "title": "DIGITAL STEALTH",
-      "description": "Offensive privacy consulting. Digital identity protection, sensitive data encryption, and social engineering countermeasures.",
-      "iconClass": "fas fa-user-secret"
+      "title": "GOVERNANCE & COMPLIANCE",
+      "description": "Security governance and regulatory compliance. LGPD/GDPR frameworks, access policies, continuous auditing, and risk management.",
+      "iconClass": "fas fa-balance-scale"
+    },
+    {
+      "title": "PERFORMANCE ENGINEERING",
+      "description": "Surgical performance optimization. System tuning, bottleneck analysis, and resource engineering for maximum operational efficiency.",
+      "iconClass": "fas fa-tachometer-alt"
     }
   ]
 }

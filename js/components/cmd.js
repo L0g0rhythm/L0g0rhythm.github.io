@@ -1,6 +1,6 @@
 /* FILE: js/components/cmd.js */
 
-import { audioSystem } from "../core/audioSynth.js";
+
 import { dictionary } from "../core/dictionary.js";
 
 const CMD_CONFIG = {
@@ -211,7 +211,7 @@ export function initCommandPalette() {
 
   function execute(cmd) {
     close();
-    if (audioSystem.enabled) audioSystem.playClick();
+
 
     if (cmd.type === CMD_CONFIG.TYPES.NAV) {
       // ARCHITECTURE FIX: Use Event Bus strictly. No direct window.app access.
@@ -224,9 +224,7 @@ export function initCommandPalette() {
       window.dispatchEvent(
         new CustomEvent("app:toast", { detail: { message: "THEME APPLIED" } })
       );
-    } else if (cmd.id === "sound") {
-      const btn = document.getElementById("sound-btn");
-      if (btn) btn.click();
+
     } else if (cmd.id === "matrix") {
       window.dispatchEvent(new CustomEvent("app:matrix"));
     } else if (cmd.id === "reload") {
@@ -241,7 +239,7 @@ export function initCommandPalette() {
     setTimeout(() => input.focus(), 50);
     selectedIndex = 0;
     renderList("");
-    if (audioSystem.enabled) audioSystem.playHover();
+
   }
 
   function close() {

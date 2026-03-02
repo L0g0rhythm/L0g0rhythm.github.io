@@ -2,12 +2,17 @@
     /* Colors */
     --bg-void: #050507;
     --accent-primary: #9d4edd;
+    --accent-secondary: #6b8aad;
+    --accent-hover: #8ab4d6;
     --text-main: #ffffff;
     --text-muted: #8b8b9b;
 
     /* Glass */
     --glass-bg: rgba(20, 20, 25, 0.7);
     --glass-border: rgba(255, 255, 255, 0.08);
+
+    /* Glow */
+    --glow-subtle: 0 0 12px rgba(107, 138, 173, 0.25);
 
     /* Fonts */
     --font-tech: "Space Grotesk", sans-serif;

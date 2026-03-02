@@ -1,26 +1,62 @@
 {
   "pt": {
-    "main_text": "Operando na interseção entre Engenharia de Software e Cibersegurança. Minha missão é construir sistemas que não apenas funcionam, mas que resistem ao caos. Com uma abordagem baseada no Estoicismo Digital, elimino o ruído para focar no essencial: Performance, Segurança e Elegância. Não escrevo apenas código; forjo soluções.",
+    "main_text": "Security Architect focado em defesa autônoma e detecção. Construo sistemas, sites e ferramentas que não apenas funcionam — resistem ao caos. Na interseção entre Cibersegurança, IA, Automação e Governança. Inspirado pela astrofísica.",
     "interests_title": "MÓDULOS DE PROCESSAMENTO",
     "interests_list": [
-      { "emoji": "🌌", "text": "ASTROFÍSICA" },
-      { "emoji": "🏎️", "text": "ENG. DE PRECISÃO" },
-      { "emoji": "🛡️", "text": "DEFESA ATIVA" },
-      { "emoji": "🤖", "text": "AUTOMAÇÃO" },
-      { "emoji": "🧠", "text": "IA & NEURAL NETS" },
-      { "emoji": "🛠️", "text": "CRIADOR DE TOOLS" }
+      {
+        "emoji": "🌌",
+        "text": "ASTROFÍSICA"
+      },
+      {
+        "emoji": "🛡️",
+        "text": "SEGURANÇA DEFENSIVA"
+      },
+      {
+        "emoji": "🤖",
+        "text": "AUTOMAÇÃO & IA"
+      },
+      {
+        "emoji": "🛠️",
+        "text": "CRIADOR DE TOOLS"
+      },
+      {
+        "emoji": "🌐",
+        "text": "WEB & SISTEMAS"
+      },
+      {
+        "emoji": "📊",
+        "text": "GOVERNANÇA"
+      }
     ]
   },
   "en": {
-    "main_text": "Operating at the intersection of Software Engineering and Cybersecurity. My mission is to build systems that not only function but withstand chaos. With an approach based on Digital Stoicism, I eliminate noise to focus on the essential: Performance, Security, and Elegance. I don't just write code; I forge solutions.",
+    "main_text": "Security Architect focused on autonomous defense and detection. I build systems, websites, and tools that don't just work — they withstand chaos. At the intersection of Cybersecurity, AI, Automation, and Governance. Inspired by astrophysics.",
     "interests_title": "PROCESSING MODULES",
     "interests_list": [
-      { "emoji": "🌌", "text": "ASTROPHYSICS" },
-      { "emoji": "🏎️", "text": "PRECISION ENG." },
-      { "emoji": "🛡️", "text": "ACTIVE DEFENSE" },
-      { "emoji": "🤖", "text": "AUTOMATION" },
-      { "emoji": "🧠", "text": "AI & NEURAL NETS" },
-      { "emoji": "🛠️", "text": "TOOLSMITHING" }
+      {
+        "emoji": "🌌",
+        "text": "ASTROPHYSICS"
+      },
+      {
+        "emoji": "🛡️",
+        "text": "DEFENSIVE SECURITY"
+      },
+      {
+        "emoji": "🤖",
+        "text": "AUTOMATION & AI"
+      },
+      {
+        "emoji": "🛠️",
+        "text": "TOOLSMITHING"
+      },
+      {
+        "emoji": "🌐",
+        "text": "WEB & SYSTEMS"
+      },
+      {
+        "emoji": "📊",
+        "text": "GOVERNANCE"
+      }
     ]
   }
 }

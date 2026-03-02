@@ -5,6 +5,7 @@ import { createSocialLinksFragment } from "./socialLinks.js";
 
 /**
  * Renders the About section using secure DOM construction (no innerHTML).
+ * Photo removed per architecture decision — layout is data-only.
  */
 export function renderAboutSection(aboutData, profileData, socialsData) {
   const container = document.getElementById(DOM_CONFIG.IDS.ABOUT_CONTAINER);
@@ -12,32 +13,7 @@ export function renderAboutSection(aboutData, profileData, socialsData) {
 
   container.innerHTML = "";
 
-  // 1. Visual Column (ID Card)
-  const visualCol = document.createElement("div");
-  visualCol.className = DOM_CONFIG.CLASSES.ABOUT_VISUAL;
-
-  const pilotCard = document.createElement("div");
-  pilotCard.className = DOM_CONFIG.CLASSES.PILOT_CARD;
-
-  const img = document.createElement("img");
-  img.src = profileData.pictureUrl;
-  img.alt = "Pilot";
-  img.className = DOM_CONFIG.CLASSES.PILOT_PHOTO;
-  img.id = DOM_CONFIG.IDS.PROFILE_IMG_ABOUT;
-
-  const pilotStatus = document.createElement("div");
-  pilotStatus.className = DOM_CONFIG.CLASSES.PILOT_STATUS;
-
-  const statusSpan1 = document.createElement("span");
-  statusSpan1.textContent = "STATUS: ONLINE";
-  const statusSpan2 = document.createElement("span");
-  statusSpan2.textContent = "LVL: MAX";
-
-  pilotStatus.append(statusSpan1, statusSpan2);
-  pilotCard.append(img, pilotStatus);
-  visualCol.appendChild(pilotCard);
-
-  // 2. Data Column
+  // Data Column (full width — no photo column)
   const dataCol = document.createElement("div");
   dataCol.className = DOM_CONFIG.CLASSES.ABOUT_DATA;
 
@@ -83,7 +59,7 @@ export function renderAboutSection(aboutData, profileData, socialsData) {
     specsGrid.appendChild(itemDiv);
   });
 
-  // 3. Social Dock
+  // Social Dock
   const dockContainer = document.createElement("div");
   dockContainer.className = DOM_CONFIG.CLASSES.SOCIAL_DOCK_CONTAINER;
 
@@ -97,7 +73,7 @@ export function renderAboutSection(aboutData, profileData, socialsData) {
 
   dockContainer.append(dockLabel, dock);
   dataCol.append(h2, bioP, specsTitle, specsGrid, dockContainer);
-  container.append(visualCol, dataCol);
+  container.appendChild(dataCol);
 
   // TypeWriter Effect
   if (window.initTypeWriter) {

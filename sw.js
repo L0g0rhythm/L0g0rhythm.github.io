@@ -1,5 +1,5 @@
 /* FILE: sw.js */
-const CACHE_NAME = "l0g0rhythm-sys-v18-modular";
+const CACHE_NAME = "l0g0rhythm-sys-v19-issue1";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -27,7 +27,6 @@ const ASSETS_TO_CACHE = [
   "./js/main.js",
   "./js/core/appConfig.js",
   "./js/core/dataLoader.js",
-  "./js/core/audioSynth.js",
   "./js/core/dictionary.js",
   "./js/core/navigation.js",
   "./js/core/toast.js",
@@ -37,7 +36,6 @@ const ASSETS_TO_CACHE = [
   "./js/core/systemMonitor.js",
   "./js/core/scrollObserver.js",
   "./js/core/inputHandler.js",
-  "./js/core/audioUnlock.js",
   "./js/core/windowEvents.js",
   "./js/components/render/renderConfig.js",
   "./js/components/render/profile.js",

@@ -3,8 +3,6 @@
 import { initHackerEffect } from "../components/hackerText.js";
 import { renderProfile } from "../components/render/profile.js";
 import { APP_CONFIG } from "./appConfig.js";
-import { audioSystem } from "./audioSynth.js";
-import { initAudioFeedback } from "./audioUnlock.js";
 import { loadAllData } from "./dataLoader.js";
 import { dictionary } from "./dictionary.js";
 import { getCurrentView, setPageTitles } from "./navigation.js";
@@ -57,14 +55,13 @@ export async function switchLanguage(newLang) {
   localStorage.setItem("userLang", newLang);
   updateLangUI(newLang);
   translateStaticUI(newLang);
-  if (audioSystem.enabled) audioSystem.playClick();
+
   document.body.classList.remove("loaded");
   try {
     const data = await loadAllData(newLang);
     renderProfile(data);
     setTimeout(() => {
       initHackerEffect();
-      initAudioFeedback();
       document.body.classList.add("loaded");
       showSystemToast(dictionary[newLang]?.toast_lang || "LANG UPDATED");
       if (window.observeElements) window.observeElements();

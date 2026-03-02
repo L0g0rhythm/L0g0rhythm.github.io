@@ -2,11 +2,6 @@
 
 // Core
 import { APP_CONFIG } from "./core/appConfig.js";
-import { audioSystem } from "./core/audioSynth.js";
-import {
-  initSoundToggle,
-  setupAudioUnlock,
-} from "./core/audioUnlock.js";
 import { loadAllData } from "./core/dataLoader.js";
 import { dictionary } from "./core/dictionary.js";
 import { initFooterSystem } from "./core/footer.js";
@@ -91,16 +86,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         initSystemMonitor();
         initScrollObserver();
         if (window.observeElements) window.observeElements();
-        setupAudioUnlock();
         initKeyboardShortcuts();
         initSwipe();
-        initSoundToggle();
         initTiltEffect();
         initCommandPalette();
         initParticles();
         initMagneticEffect();
         initContextMenu();
-        audioSystem.init();
+
         setTimeout(() => initHackerEffect(), 200);
       },
       hasBooted ? 0 : 2200

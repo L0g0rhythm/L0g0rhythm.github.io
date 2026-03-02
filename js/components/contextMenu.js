@@ -1,6 +1,6 @@
 /* FILE: js/components/contextMenu.js */
 
-import { audioSystem } from "../core/audioSynth.js";
+
 import { dictionary } from "../core/dictionary.js";
 
 const CTX_CONFIG = {
@@ -111,7 +111,7 @@ export function initContextMenu() {
     menu.style.top = `${posY}px`;
     menu.classList.add(CTX_CONFIG.CLASSES.ACTIVE);
 
-    if (audioSystem.enabled) audioSystem.playHover();
+
   });
 
   // Logic: Close
@@ -121,7 +121,7 @@ export function initContextMenu() {
 
   // Logic: Action Handler
   function handleMenuAction(action) {
-    if (audioSystem.enabled) audioSystem.playClick();
+
 
     switch (action) {
       case CTX_CONFIG.ACTIONS.BACK:
