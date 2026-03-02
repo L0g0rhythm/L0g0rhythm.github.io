@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Victor Oliveira",
+  "alternateName": "L0g0rhythm",
+  "url": "https://l0g0rhythm.com.br",
+  "image": "https://l0g0rhythm.com.br/images/profile.webp",
+  "jobTitle": "Cybersecurity Architect & Systems Engineer",
+  "description": "High-Performance Systems Architect specialized in Cyber Warfare, Automation, and Secure Infrastructure.",
+  "knowsAbout": [
+    "Cybersecurity",
+    "Rust",
+    "Python",
+    "System Architecture",
+    "AI"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Recife",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://github.com/L0g0rhythm",
+    "https://www.linkedin.com/in/l0g0rhythm/",
+    "https://medium.com/@L0g0rhythm"
+  ]
+}

@@ -1,0 +1,31 @@
+/* FILE: css/noscript.css */
+
+/* Fallback styles when JavaScript is disabled */
+#boot-sequence {
+    display: none !important;
+}
+
+#interface-viewport {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.view-section {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+}
+
+.noscript-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #9d4edd;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    z-index: 99999;
+    font-family: monospace;
+    font-weight: bold;
+}

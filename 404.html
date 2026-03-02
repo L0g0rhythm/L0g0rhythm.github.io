@@ -8,7 +8,7 @@
     />
     <title>404 | SIGNAL LOST</title>
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self';">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,44 +40,6 @@
       <a href="./" class="return-btn" id="return-btn"> INITIALIZE RETURN SEQUENCE </a>
     </main>
 
-    <script type="module">
-      import { audioSystem } from "./js/core/audioSynth.js";
-
-      document.addEventListener("DOMContentLoaded", () => {
-        // 1. Theme Restoration (Visual Consistency)
-        const savedTheme = localStorage.getItem("userTheme");
-        if (savedTheme) {
-          document.documentElement.style.setProperty("--accent-primary", savedTheme);
-        }
-
-        // 2. Audio Subsystem Initialization
-        // Audio requires user interaction to unlock
-        const unlockAudio = () => {
-          if (audioSystem.analyser?.context.state === "suspended") {
-             audioSystem.analyser.context.resume();
-          }
-          audioSystem.initContext();
-
-          document.removeEventListener("click", unlockAudio);
-          document.removeEventListener("keydown", unlockAudio);
-        };
-
-        document.addEventListener("click", unlockAudio);
-        document.addEventListener("keydown", unlockAudio);
-
-        // 3. Audio Bind on Return Button
-        const btn = document.getElementById("return-btn");
-        if (btn) {
-          btn.addEventListener("mouseenter", () => {
-            if (audioSystem.enabled) audioSystem.playHover();
-          });
-
-          btn.addEventListener("click", (e) => {
-            if (audioSystem.enabled) audioSystem.playClick();
-          });
-        }
-      });
-    </script>
+    <script type="module" src="./js/pages/404.js"></script>
   </body>
 </html>
-

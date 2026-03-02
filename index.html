@@ -23,7 +23,7 @@
 
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self';"
+      content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self';"
     />
 
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -51,21 +51,11 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome: async load to avoid render-blocking -->
     <link
-      rel="preload"
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      />
-    </noscript>
 
-    <!-- CSS: direct links eliminate @import waterfall -->
     <link rel="stylesheet" href="./css/base/variables.css" />
     <link rel="stylesheet" href="./css/base/reset.css" />
     <link rel="stylesheet" href="./css/base/base.css" />
@@ -83,68 +73,11 @@
     <link rel="stylesheet" href="./css/components/context-menu.css" />
     <link rel="stylesheet" href="./css/utilities/animations.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Victor Oliveira",
-        "alternateName": "L0g0rhythm",
-        "url": "https://l0g0rhythm.com.br",
-        "image": "https://l0g0rhythm.com.br/images/profile.webp",
-        "jobTitle": "Cybersecurity Architect & Systems Engineer",
-        "description": "High-Performance Systems Architect specialized in Cyber Warfare, Automation, and Secure Infrastructure.",
-        "knowsAbout": [
-          "Cybersecurity",
-          "Rust",
-          "Python",
-          "System Architecture",
-          "AI"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Recife",
-          "addressCountry": "BR"
-        },
-        "sameAs": [
-          "https://github.com/L0g0rhythm",
-          "https://www.linkedin.com/in/l0g0rhythm/",
-          "https://medium.com/@L0g0rhythm"
-        ]
-      }
-    </script>
   </head>
   <body>
     <noscript>
-      <style>
-        #boot-sequence {
-          display: none !important;
-        }
-        #interface-viewport {
-          opacity: 1 !important;
-          visibility: visible !important;
-        }
-        .view-section {
-          opacity: 1 !important;
-          visibility: visible !important;
-          pointer-events: all !important;
-        }
-      </style>
-      <div
-        style="
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: #9d4edd;
-          color: #000;
-          text-align: center;
-          padding: 10px;
-          z-index: 99999;
-          font-family: monospace;
-          font-weight: bold;
-        "
-      >
+      <link rel="stylesheet" href="./css/noscript.css" />
+      <div class="noscript-banner">
         ⚠ JAVASCRIPT REQUIRED FOR SYSTEM FUNCTIONS
       </div>
     </noscript>

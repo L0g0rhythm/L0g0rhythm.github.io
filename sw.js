@@ -1,5 +1,5 @@
 /* FILE: sw.js */
-const CACHE_NAME = "l0g0rhythm-sys-v17-apex";
+const CACHE_NAME = "l0g0rhythm-sys-v18-modular";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -22,11 +22,31 @@ const ASSETS_TO_CACHE = [
   "./css/components/context-menu.css",
   "./css/utilities/animations.css",
   "./css/responsive.css",
+  "./css/noscript.css",
+  "./css/pages/404.css",
   "./js/main.js",
+  "./js/core/appConfig.js",
   "./js/core/dataLoader.js",
   "./js/core/audioSynth.js",
   "./js/core/dictionary.js",
-  "./js/components/renderer.js",
+  "./js/core/navigation.js",
+  "./js/core/toast.js",
+  "./js/core/themeManager.js",
+  "./js/core/languageSwitcher.js",
+  "./js/core/footer.js",
+  "./js/core/systemMonitor.js",
+  "./js/core/scrollObserver.js",
+  "./js/core/inputHandler.js",
+  "./js/core/audioUnlock.js",
+  "./js/core/windowEvents.js",
+  "./js/components/render/renderConfig.js",
+  "./js/components/render/profile.js",
+  "./js/components/render/profileImage.js",
+  "./js/components/render/about.js",
+  "./js/components/render/services.js",
+  "./js/components/render/projects.js",
+  "./js/components/render/socialLinks.js",
+  "./js/components/render/typewriter.js",
   "./js/components/tilt.js",
   "./js/components/matrix.js",
   "./js/components/hackerText.js",
@@ -34,12 +54,14 @@ const ASSETS_TO_CACHE = [
   "./js/components/contextMenu.js",
   "./js/components/particles.js",
   "./js/components/magnetic.js",
+  "./js/pages/404.js",
   "./data/profile.json",
   "./data/about.json",
   "./data/projects.json",
   "./data/services.json",
   "./data/socials.json",
   "./data/tools.json",
+  "./data/schema.json",
   "./images/profile.webp",
   "./images/favicon.ico",
   "./images/favicon-32x32.png",
@@ -73,7 +95,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
 
-  // JSON data: always attempt fresh network fetch first
+  // JSON data: network-first for freshness
   if (url.pathname.endsWith(".json")) {
     event.respondWith(
       fetch(event.request)
@@ -89,7 +111,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Network First strategy for all other assets
+  // Network First for all other assets
   event.respondWith(
     fetch(event.request)
       .then((networkResponse) => {
