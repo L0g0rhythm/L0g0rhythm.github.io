@@ -19,7 +19,7 @@ export function renderProfile(data) {
   try {
     if (data.profile) updateProfileImage(data.profile);
     if (data.about && data.profile)
-      renderAboutSection(data.about, data.profile, data.socials);
+      renderAboutSection(data.about, data.profile);
 
     if (Array.isArray(data.services)) renderServices(data.services);
     if (Array.isArray(data.projects)) renderProjects(data.projects);

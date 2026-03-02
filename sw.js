@@ -1,5 +1,5 @@
 /* FILE: sw.js */
-const CACHE_NAME = "l0g0rhythm-sys-v19-issue1";
+const CACHE_NAME = "l0g0rhythm-sys-v20-no-social-dock";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
