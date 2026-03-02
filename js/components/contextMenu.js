@@ -65,7 +65,10 @@ export function initContextMenu() {
   // 3. Build Items
   menuItems.forEach((item) => {
     if (item.type === "separator") {
-      list.appendChild(document.createElement("hr"));
+      const sep = document.createElement("li");
+      sep.setAttribute("role", "separator");
+      sep.className = "ctx-separator";
+      list.appendChild(sep);
       return;
     }
 

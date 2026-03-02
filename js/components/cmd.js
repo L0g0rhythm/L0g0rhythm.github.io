@@ -43,6 +43,8 @@ export function initCommandPalette() {
   input.type = "text";
   input.className = CMD_CONFIG.CLASSES.INPUT;
   input.autofocus = true;
+  input.setAttribute("aria-label", "Command search");
+  input.placeholder = "Type a command...";
 
   inputWrapper.append(icon, input);
 
@@ -158,9 +160,8 @@ export function initCommandPalette() {
 
     currentCommands.forEach((cmd, index) => {
       const li = document.createElement("li");
-      li.className = `${CMD_CONFIG.CLASSES.ITEM} ${
-        index === selectedIndex ? CMD_CONFIG.CLASSES.SELECTED : ""
-      }`;
+      li.className = `${CMD_CONFIG.CLASSES.ITEM} ${index === selectedIndex ? CMD_CONFIG.CLASSES.SELECTED : ""
+        }`;
 
       const leftSpan = document.createElement("span");
 
